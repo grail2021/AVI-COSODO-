@@ -1,0 +1,1501 @@
+🐓 AVI-COSOSO 🌾
+Initiative Avicole Solidaire du Paysage Ndoubock
+🌟 🤝 🌍
+Ensemble, construisons une aviculture familiale prospère et durable !
+Une première historique dans le Forum COSODO ! 🎉
+
+AVI-COSOSO est bien plus qu'un projet : c'est un mouvement communautaire qui transforme notre aviculture locale en véritable moteur de développement socio-économique, d'autonomisation et de sécurité alimentaire pour tout le paysage Ndoubock.
+
+💡
+Notre Impact Transformateur
+🎯
+Autonomisation Économique
+Création d'opportunités de revenus durables pour les aviculteurs, avicultrices, jeunes et femmes du paysage Ndoubock.
+
+🍗
+Sécurité Alimentaire
+Amélioration de la sécurité protéique et nutritionnelle des familles grâce à une production avicole écologique de qualité.
+
+🌱
+Développement Durable
+Contribution directe aux Objectifs de Développement Durable (ODD) : lutte contre la pauvreté, faim zéro, égalité des sexes.
+
+💰
+Économie Locale
+Revitalisation de l'économie des terroirs et création d'une filière avicole communautaire compétitive sur les marchés équitables.
+
+🤝
+Solidarité Diasporique
+Connexion avec les diasporas enracinées dans leurs terroirs ancestraux, créant des opportunités de marchés solidaires et équitables.
+
+👥
+Innovation Communautaire
+Dynamisation des groupes Nsieuh (tontines de travail) pour mutualiser les ressources, risques et bénéfices.
+
+📊 Notre Ambition en Chiffres
+200
+Poussins démarrage
+1000
+Poussins/mois cible
+500K
+FCFA budget actuel
+♾️
+Impact durable
+📈
+Notre Progression
+Grâce à la mobilisation exceptionnelle de nos membres, nous avons réduit le budget de 800 000 à 500 000 FCFA !
+
+62.5% réalisé ! 🎯
+Chaque contribution nous rapproche du démarrage !
+
+🔄
+Notre Modèle Innovant
+Installation d'une unité de reproduction communautaire avec système de chauffage moderne
+Distribution de poussins d'un jour et de 21 jours aux groupes Nsieuh
+Production avicole écologique et biologique respectueuse de l'environnement
+Mutualisation des risques, bénéfices et opportunités
+Accompagnement technique et partage de bonnes pratiques
+Accès aux marchés équitables et solidaires
+"Cette initiative représente un test grandeur nature de notre capacité de mobilisation et de notre élan solidaire. Chacun contribue selon ses moyens, et ensemble nous bâtissons une filière avicole prospère qui transformera durablement nos communautés."
+— Vision COSODO Ndoubock
+💪 Rejoignez le Mouvement !
+Votre contribution, quelle que soit sa taille, fait la différence. Ensemble, nous créons un avenir prospère pour Ndoubock !
+
+💬
+Rejoindre le Groupe WhatsApp
+📱
+Contribuer Maintenant
+Transférez votre contribution via Mobile Money :
+
+🟠
+Orange Money
++237 640 032 317
+🟡
+MTN Mobile Money
++237 672 518 964
+💝 Contact Coordinatrice : Contactez directement notre Coordinatrice dévouée pour toute question ou pour coordonner votre contribution.
+
+📞
+Appel vers Orange
+📞
+Appel vers MTN
+📢
+Partagez Notre Mission
+Multipliez notre impact en partageant cette initiative dans vos réseaux !
+
+
+💬
+WhatsApp
+
+📘
+Facebook
+
+🐦
+Twitter
+🙏🏾 ❤️ 🌟
+Merci pour votre soutien et votre engagement !
+Ensemble, nous bâtissons un avenir prospère et durable pour Ndoubock.
+
+AVI-COSOSO - Où la solidarité rencontre l'innovation
+
+Initiative COSODO (Coopérative Agricole Solidaire du Paysage Ndoubock) | Développement Communautaire Durable
+
+[<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#8B4513">
+    <title>AVI-COSOSO - Cagnotte Communautaire Solidaire</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #8B4513 0%, #D2691E 25%, #CD853F 50%, #DEB887 75%, #F4A460 100%);
+            color: #333;
+            line-height: 1.5;
+            padding: 0;
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        .background-eggs {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .egg-motif, .chick-motif {
+            position: absolute;
+            font-size: 60px;
+            opacity: 0.05;
+            animation: float 8s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-15px) rotate(5deg); }
+        }
+
+        .egg-1 { top: 15%; left: 10%; animation-delay: 0s; }
+        .egg-2 { top: 50%; left: 5%; animation-delay: 1s; }
+        .egg-3 { top: 35%; right: 8%; animation-delay: 2s; }
+        .chick-1 { top: 70%; right: 10%; animation-delay: 1.5s; }
+
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+            background: white;
+            min-height: 100vh;
+            position: relative;
+            z-index: 1;
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                max-width: 768px;
+                box-shadow: 0 0 40px rgba(139, 69, 19, 0.3);
+            }
+        }
+
+        .header {
+            background: linear-gradient(135deg, #8B4513 0%, #D2691E 100%);
+            padding: 20px 15px;
+            text-align: center;
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        .header h1 {
+            font-size: clamp(22px, 5vw, 28px);
+            margin-bottom: 6px;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header .subtitle {
+            font-size: clamp(13px, 3.5vw, 15px);
+            opacity: 0.95;
+            margin-bottom: 10px;
+        }
+
+        .live-indicator {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255,255,255,0.2);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            backdrop-filter: blur(10px);
+        }
+
+        .pulse-dot {
+            width: 10px;
+            height: 10px;
+            background: #4caf50;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+            box-shadow: 0 0 8px #4caf50;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.2); }
+        }
+
+        .campaign-hero {
+            background: linear-gradient(to bottom, rgba(210, 105, 30, 0.08), transparent);
+            padding: 25px 15px;
+            text-align: center;
+        }
+
+        .campaign-hero h2 {
+            color: #8B4513;
+            font-size: clamp(18px, 4.5vw, 22px);
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .campaign-hero p {
+            color: #666;
+            font-size: clamp(13px, 3.5vw, 15px);
+            line-height: 1.6;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .main-counter {
+            background: linear-gradient(135deg, #8B4513 0%, #D2691E 100%);
+            color: white;
+            padding: 25px 15px;
+            margin: 15px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(139, 69, 19, 0.3);
+            border: 2px solid #CD853F;
+        }
+
+        .amount-label {
+            font-size: clamp(12px, 3vw, 14px);
+            opacity: 0.95;
+            margin-bottom: 8px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .amount-value {
+            font-size: clamp(36px, 8vw, 48px);
+            font-weight: 700;
+            margin: 10px 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            word-break: break-word;
+        }
+
+        .amount-suffix {
+            font-size: clamp(18px, 4vw, 22px);
+            opacity: 0.9;
+        }
+
+        .goal-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 2px solid rgba(255,255,255,0.3);
+            font-size: clamp(11px, 2.8vw, 13px);
+        }
+
+        .goal-info > div {
+            text-align: center;
+            padding: 8px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 8px;
+        }
+
+        .progress-section {
+            padding: 20px 15px;
+        }
+
+        .progress-label {
+            text-align: center;
+            margin-bottom: 12px;
+            color: #8B4513;
+            font-weight: 700;
+            font-size: clamp(13px, 3.5vw, 15px);
+        }
+
+        .progress-bar-container {
+            background: linear-gradient(to right, #f5f5f5, #e9ecef);
+            height: 50px;
+            border-radius: 25px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.15);
+            border: 2px solid #DEB887;
+        }
+
+        .progress-bar {
+            background: linear-gradient(90deg, #8B4513 0%, #D2691E 50%, #CD853F 100%);
+            height: 100%;
+            width: 0%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: clamp(14px, 3.5vw, 16px);
+            transition: width 1.5s ease;
+            position: relative;
+            box-shadow: 0 0 10px rgba(139, 69, 19, 0.5);
+        }
+
+        .progress-bar::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            animation: shimmer 2.5s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        .progress-marks {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            font-size: clamp(11px, 2.8vw, 13px);
+            color: #8B4513;
+            font-weight: 600;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin: 15px;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, #FFF8DC 0%, #FAEBD7 100%);
+            padding: 20px 10px;
+            border-radius: 12px;
+            text-align: center;
+            border: 2px solid #DEB887;
+            box-shadow: 0 2px 8px rgba(139, 69, 19, 0.15);
+        }
+
+        .stat-number {
+            font-size: clamp(26px, 6vw, 32px);
+            font-weight: 700;
+            color: #8B4513;
+            margin-bottom: 6px;
+        }
+
+        .stat-label {
+            font-size: clamp(11px, 2.8vw, 13px);
+            color: #6c4a2e;
+            font-weight: 600;
+        }
+
+        .contributions-feed {
+            padding: 15px;
+        }
+
+        .section-title {
+            color: #8B4513;
+            font-size: clamp(18px, 4.5vw, 20px);
+            font-weight: 700;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #D2691E;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .contribution-item {
+            background: linear-gradient(135deg, #FFFAF0 0%, #FFF8DC 100%);
+            border: 2px solid #DEB887;
+            border-radius: 12px;
+            padding: 15px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            animation: slideIn 0.6s ease;
+            box-shadow: 0 2px 8px rgba(139, 69, 19, 0.1);
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .contribution-avatar {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #8B4513 0%, #D2691E 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            flex-shrink: 0;
+            box-shadow: 0 2px 8px rgba(139, 69, 19, 0.3);
+        }
+
+        .contribution-details {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .contribution-name {
+            font-weight: 700;
+            color: #5d3a1a;
+            margin-bottom: 4px;
+            font-size: clamp(13px, 3.5vw, 15px);
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .contribution-time {
+            font-size: clamp(11px, 2.8vw, 12px);
+            color: #8B4513;
+            opacity: 0.8;
+        }
+
+        .contribution-message {
+            color: #6c4a2e;
+            font-size: clamp(12px, 3vw, 13px);
+            margin-top: 4px;
+            font-style: italic;
+        }
+
+        .contribution-amount {
+            font-weight: 700;
+            color: #228B22;
+            font-size: clamp(15px, 4vw, 17px);
+            flex-shrink: 0;
+            text-align: right;
+        }
+
+        .admin-section {
+            background: linear-gradient(135deg, #FFF8DC 0%, #FAEBD7 100%);
+            border: 3px solid #D2691E;
+            border-radius: 12px;
+            padding: 20px 15px;
+            margin: 15px;
+            box-shadow: 0 3px 10px rgba(139, 69, 19, 0.15);
+        }
+
+        .admin-title {
+            font-weight: 700;
+            color: #8B4513;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: clamp(15px, 4vw, 17px);
+        }
+
+        .admin-description {
+            font-size: clamp(12px, 3vw, 13px);
+            color: #6c4a2e;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+
+        .btn-admin {
+            background: linear-gradient(135deg, #D2691E 0%, #CD853F 100%);
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: clamp(13px, 3.5vw, 15px);
+            cursor: pointer;
+            margin: 5px 5px 5px 0;
+            transition: transform 0.2s ease;
+            box-shadow: 0 2px 8px rgba(139, 69, 19, 0.2);
+            width: calc(50% - 5px);
+            display: inline-block;
+            text-align: center;
+        }
+
+        .btn-admin:active {
+            transform: scale(0.95);
+        }
+
+        .contribute-section {
+            background: linear-gradient(135deg, #D2691E 0%, #CD853F 100%);
+            padding: 25px 15px;
+            text-align: center;
+            color: white;
+            position: sticky;
+            bottom: 0;
+            box-shadow: 0 -4px 15px rgba(139, 69, 19, 0.3);
+            border-top: 3px solid #8B4513;
+            z-index: 50;
+        }
+
+        .contribute-section h3 {
+            font-size: clamp(18px, 4.5vw, 22px);
+            margin-bottom: 10px;
+        }
+
+        .contribute-section p {
+            font-size: clamp(12px, 3vw, 14px);
+            margin-bottom: 15px;
+            opacity: 0.95;
+        }
+
+        .btn-contribute {
+            background: white;
+            color: #8B4513;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            font-size: clamp(15px, 4vw, 17px);
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+            transition: transform 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            width: auto;
+            max-width: 100%;
+        }
+
+        .btn-contribute:active {
+            transform: scale(0.95);
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(139, 69, 19, 0.85);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+            backdrop-filter: blur(5px);
+            overflow-y: auto;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: linear-gradient(to bottom, #FFFAF0, white);
+            border-radius: 15px;
+            padding: 25px 20px;
+            max-width: 500px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+            border: 3px solid #D2691E;
+            margin: auto;
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #DEB887;
+        }
+
+        .modal-title {
+            font-size: clamp(18px, 5vw, 22px);
+            font-weight: 700;
+            color: #8B4513;
+        }
+
+        .btn-close {
+            background: none;
+            border: none;
+            font-size: 28px;
+            cursor: pointer;
+            color: #8B4513;
+            line-height: 1;
+            padding: 0;
+            min-width: 32px;
+            min-height: 32px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-label {
+            display: block;
+            font-weight: 600;
+            color: #5d3a1a;
+            margin-bottom: 8px;
+            font-size: clamp(13px, 3.5vw, 15px);
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 14px;
+            border: 2px solid #DEB887;
+            border-radius: 10px;
+            font-size: clamp(14px, 3.5vw, 16px);
+            transition: border-color 0.3s ease;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: #8B4513;
+            box-shadow: 0 0 8px rgba(139, 69, 19, 0.2);
+        }
+
+        .amount-options {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .amount-option {
+            padding: 15px 8px;
+            border: 2px solid #DEB887;
+            border-radius: 10px;
+            text-align: center;
+            cursor: pointer;
+            font-weight: 700;
+            transition: all 0.2s ease;
+            background: white;
+            color: #8B4513;
+            font-size: clamp(12px, 3vw, 14px);
+            min-height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .amount-option:active {
+            transform: scale(0.95);
+        }
+
+        .amount-option.selected {
+            border-color: #8B4513;
+            background: linear-gradient(135deg, #8B4513, #D2691E);
+            color: white;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+
+        .checkbox-group label {
+            cursor: pointer;
+            color: #5d3a1a;
+            font-size: clamp(13px, 3.5vw, 15px);
+        }
+
+        .btn-submit {
+            width: 100%;
+            background: linear-gradient(135deg, #8B4513 0%, #D2691E 100%);
+            color: white;
+            padding: 16px;
+            border: none;
+            border-radius: 12px;
+            font-size: clamp(15px, 4vw, 17px);
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+            box-shadow: 0 3px 12px rgba(139, 69, 19, 0.3);
+        }
+
+        .btn-submit:active {
+            transform: scale(0.97);
+        }
+
+        .success-message {
+            background: linear-gradient(135deg, #d4edda, #c3e6cb);
+            border: 2px solid #28a745;
+            color: #155724;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 15px;
+            text-align: center;
+            font-weight: 600;
+            line-height: 1.6;
+            font-size: clamp(13px, 3.5vw, 15px);
+        }
+
+        .footer-info {
+            background: linear-gradient(135deg, #8B4513 0%, #5d3a1a 100%);
+            color: white;
+            padding: 20px 15px;
+            text-align: center;
+            font-size: clamp(11px, 2.8vw, 13px);
+            line-height: 1.6;
+            border-top: 3px solid #D2691E;
+        }
+
+        .footer-info strong {
+            color: #F4A460;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 40px 20px;
+            color: #8B4513;
+        }
+
+        .empty-state-icon {
+            font-size: 50px;
+            margin-bottom: 15px;
+        }
+
+        .empty-state-text {
+            font-size: clamp(14px, 3.5vw, 16px);
+            font-weight: 600;
+        }
+
+        @media (max-width: 480px) {
+            .goal-info {
+                font-size: 11px;
+            }
+           
+            .btn-admin {
+                width: 100%;
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="background-eggs">
+        <div class="egg-motif egg-1">🥚</div>
+        <div class="egg-motif egg-2">🥚</div>
+        <div class="egg-motif egg-3">🥚</div>
+        <div class="chick-motif chick-1">🐣</div>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <h1>🐓 AVI-COSOSO 🌾</h1>
+            <div class="subtitle">Cagnotte Communautaire Solidaire - Paysage Ndoubock</div>
+            <div class="live-indicator">
+                <span class="pulse-dot"></span>
+                <span>Mise à jour en temps réel</span>
+            </div>
+        </div>
+
+        <div class="campaign-hero">
+            <h2>Initiative Avicole Solidaire</h2>
+            <p>
+                Coopérative Agricole Solidaire du Paysage Ndoubock<br>
+                Ensemble, construisons une aviculture familiale prospère et durable !
+            </p>
+        </div>
+
+        <div class="main-counter">
+            <div class="amount-raised">
+                <div class="amount-label">💰 MONTANT TOTAL COLLECTÉ</div>
+                <div class="amount-value">
+                    <span id="totalRaised">300,000</span>
+                    <span class="amount-suffix">FCFA</span>
+                </div>
+                <div class="goal-info">
+                    <div>
+                        <strong>Phase 1 collectée</strong><br>
+                        300,000 FCFA
+                    </div>
+                    <div>
+                        <strong>Objectif Phase 2</strong><br>
+                        500,000 FCFA
+                    </div>
+                </div>
+                <div class="goal-info" style="border-top: none; padding-top: 5px; margin-top: 5px;">
+                    <div>
+                        <strong>Objectif global</strong><br>
+                        800,000 FCFA
+                    </div>
+                    <div>
+                        <strong id="percentRaised">37.5%</strong> du total
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="progress-section">
+            <div class="progress-label">
+                📊 Phase 2 : Mobilisation de 500,000 FCFA
+            </div>
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="progressBar">
+                    <span id="progressText">0%</span>
+                </div>
+            </div>
+            <div class="progress-marks">
+                <span>0 FCFA</span>
+                <span>500,000 FCFA</span>
+            </div>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number" id="contributorCount">0</div>
+                <div class="stat-label">Contributeurs</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="daysLeft">30</div>
+                <div class="stat-label">Jours restants</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="remaining">500K</div>
+                <div class="stat-label">À mobiliser</div>
+            </div>
+        </div>
+
+        <div class="contributions-feed">
+            <h2 class="section-title">
+                <span>🎁</span> Dernières Contributions
+            </h2>
+            <div id="contributionsList">
+                <div class="empty-state">
+                    <div class="empty-state-icon">🐣</div>
+                    <p class="empty-state-text">Soyez le premier à contribuer !</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="admin-section">
+            <div class="admin-title">🔐 Administration</div>
+            <p class="admin-description">
+                Section réservée à la Coordinatrice pour enregistrer les contributions reçues
+            </p>
+            <button class="btn-admin" onclick="openAdminModal()">
+                ➕ Enregistrer
+            </button>
+            <button class="btn-admin" onclick="exportData()">
+                📊 Exporter
+            </button>
+            <button class="btn-admin" onclick="showStats()">
+                📈 Statistiques
+            </button>
+            <button class="btn-admin" onclick="resetData()">
+                🔄 Réinitialiser
+            </button>
+        </div>
+
+        <div class="contribute-section">
+            <h3>💪 Rejoignez le Mouvement !</h3>
+            <p>Chaque contribution compte pour l'avenir de notre communauté</p>
+            <button class="btn-contribute" onclick="openContributeModal()">
+                <span>💚</span>
+                <span>Je Contribue</span>
+            </button>
+        </div>
+
+        <div class="footer-info">
+            Application développée pour la <strong>Coopérative Agricole Solidaire du Paysage Ndoubock</strong><br>
+            🐓 AVI-COSOSO - Ensemble pour un agropastoralisme durable 🌾
+        </div>
+    </div>
+
+    <!-- Modal Contribution -->
+    <div class="modal" id="contributeModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">💚 Ma Contribution</h3>
+                <button class="btn-close" onclick="closeModal('contributeModal')">&times;</button>
+            </div>
+          
+            <div class="form-group">
+                <label class="form-label">Montant de votre contribution</label>
+                <div class="amount-options">
+                    <div class="amount-option" onclick="selectAmount(10000)">10,000</div>
+                    <div class="amount-option" onclick="selectAmount(25000)">25,000</div>
+                    <div class="amount-option" onclick="selectAmount(50000)">50,000</div>
+                    <div class="amount-option" onclick="selectAmount(100000)">100,000</div>
+                    <div class="amount-option" onclick="selectAmount(200000)">200,000</div>
+                    <div class="amount-option" onclick="selectAmount(0)">Autre</div>
+                </div>
+                <input type="number" class="form-input" id="contributeAmount" placeholder="Montant personnalisé (FCFA)" min="1000" step="1000" inputmode="numeric">
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Votre nom (optionnel)</label>
+                <input type="text" class="form-input" id="contributeName" placeholder="Ex: Tchiegang Merline">
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Message de soutien (optionnel)</label>
+                <input type="text" class="form-input" id="contributeMessage" placeholder="Votre message...">
+            </div>
+
+            <div class="checkbox-group">
+                <input type="checkbox" id="anonymousContribute">
+                <label for="anonymousContribute">Contribution anonyme</label>
+            </div>
+
+            <button class="btn-submit" onclick="submitContribution()">
+                ✅ Valider ma Contribution
+            </button>
+
+            <div id="contributeSuccess"></div>
+        </div>
+    </div>
+
+    <!-- Modal Administration -->
+    <div class="modal" id="adminModal">
+        <div class="modal-content">
+            <div class="modal-header
+                <h3 class="modal-title">🔐 Administration</h3>
+                <button class="btn-close" onclick="closeModal('adminModal')">&times;</button>
+            </div>
+
+            <div id="adminLoginSection">
+                <div class="form-group">
+                    <label class="form-label">🔑 Mot de passe administrateur</label>
+                    <input type="password" class="form-input" id="adminPassword" placeholder="Entrez le mot de passe" autocomplete="current-password">
+                </div>
+                <button class="btn-submit" onclick="verifyAdminPassword()">
+                    🔓 Se connecter
+                </button>
+                <div id="adminLoginError"></div>
+            </div>
+
+            <div id="adminFormSection" style="display: none;">
+                <div class="form-group">
+                    <label class="form-label">Montant reçu (FCFA)</label>
+                    <div class="amount-options">
+                        <div class="amount-option" onclick="selectAdminAmount(10000)">10,000</div>
+                        <div class="amount-option" onclick="selectAdminAmount(25000)">25,000</div>
+                        <div class="amount-option" onclick="selectAdminAmount(50000)">50,000</div>
+                        <div class="amount-option" onclick="selectAdminAmount(100000)">100,000</div>
+                        <div class="amount-option" onclick="selectAdminAmount(200000)">200,000</div>
+                        <div class="amount-option" onclick="selectAdminAmount(0)">Autre</div>
+                    </div>
+                    <input type="number" class="form-input" id="adminAmount" placeholder="Montant exact (FCFA)" min="1000" step="1000" required inputmode="numeric">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Nom du contributeur</label>
+                    <input type="text" class="form-input" id="adminName" placeholder="Nom complet" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Mode de paiement</label>
+                    <select class="form-input" id="adminPayment">
+                        <option value="Espèces">💵 Espèces</option>
+                        <option value="Mobile Money">📱 Mobile Money</option>
+                        <option value="Virement">🏦 Virement bancaire</option>
+                        <option value="Chèque">📝 Chèque</option>
+                        <option value="Autre">🔄 Autre</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Note ou commentaire (optionnel)</label>
+                    <input type="text" class="form-input" id="adminNote" placeholder="Note additionnelle...">
+                </div>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="anonymousAdmin">
+                    <label for="anonymousAdmin">Enregistrer comme anonyme</label>
+                </div>
+
+                <button class="btn-submit" onclick="submitAdminContribution()">
+                    ✅ Enregistrer la Contribution
+                </button>
+
+                <div id="adminSuccess"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Changement de mot de passe -->
+    <div class="modal" id="passwordModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">🔐 Changer le mot de passe</h3>
+                <button class="btn-close" onclick="closeModal('passwordModal')">&times;</button>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Mot de passe actuel</label>
+                <input type="password" class="form-input" id="currentPassword" placeholder="Mot de passe actuel" autocomplete="current-password">
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Nouveau mot de passe</label>
+                <input type="password" class="form-input" id="newPassword" placeholder="Nouveau mot de passe (min. 6 caractères)" autocomplete="new-password">
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Confirmer le nouveau mot de passe</label>
+                <input type="password" class="form-input" id="confirmPassword" placeholder="Confirmer le mot de passe" autocomplete="new-password">
+            </div>
+
+            <button class="btn-submit" onclick="changePassword()">
+                🔒 Changer le mot de passe
+            </button>
+
+            <div id="passwordChangeResult"></div>
+        </div>
+    </div>
+
+    <script>
+        // Configuration
+        const GOAL_AMOUNT = 500000;
+        const INITIAL_AMOUNT = 300000;
+        const TARGET_DATE = new Date('2025-11-18');
+        const DEFAULT_PASSWORD = 'admin123';
+
+        // État de l'application
+        let contributions = JSON.parse(localStorage.getItem('contributions') || '[]');
+        let totalRaised = INITIAL_AMOUNT;
+        let adminPassword = localStorage.getItem('adminPassword') || DEFAULT_PASSWORD;
+        let isAdminAuthenticated = false;
+
+        // Calculer le total avec les contributions
+        contributions.forEach(c => totalRaised += c.amount);
+
+        // Initialisation
+        document.addEventListener('DOMContentLoaded', function() {
+            updateDisplay();
+            calculateDaysLeft();
+            displayContributions();
+            setupTouchHandlers();
+        });
+
+        function setupTouchHandlers() {
+            // Amélioration de l'expérience tactile
+            document.querySelectorAll('.amount-option, .btn-admin, .btn-contribute, .btn-submit').forEach(el => {
+                el.addEventListener('touchstart', function() {
+                    this.style.opacity = '0.7';
+                }, {passive: true});
+               
+                el.addEventListener('touchend', function() {
+                    this.style.opacity = '1';
+                }, {passive: true});
+            });
+
+            // Fermeture des modals sur Escape
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    document.querySelectorAll('.modal.active').forEach(modal => {
+                        modal.classList.remove('active');
+                    });
+                }
+            });
+        }
+
+        function updateDisplay() {
+            const raised = totalRaised - INITIAL_AMOUNT;
+            const percentage = Math.min((raised / GOAL_AMOUNT) * 100, 100);
+            const remaining = Math.max(GOAL_AMOUNT - raised, 0);
+            const totalPercentage = ((totalRaised / (INITIAL_AMOUNT + GOAL_AMOUNT)) * 100).toFixed(1);
+
+            document.getElementById('totalRaised').textContent = totalRaised.toLocaleString('fr-FR');
+            document.getElementById('percentRaised').textContent = totalPercentage + '%';
+            document.getElementById('progressBar').style.width = percentage + '%';
+            document.getElementById('progressText').textContent = percentage.toFixed(1) + '%';
+            document.getElementById('contributorCount').textContent = contributions.length;
+            document.getElementById('remaining').textContent = (remaining / 1000).toFixed(0) + 'K';
+        }
+
+        function calculateDaysLeft() {
+            const today = new Date();
+            const diffTime = TARGET_DATE - today;
+            const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+            document.getElementById('daysLeft').textContent = Math.max(diffDays, 0);
+        }
+
+        function displayContributions() {
+            const list = document.getElementById('contributionsList');
+           
+            if (contributions.length === 0) {
+                list.innerHTML = `
+                    <div class="empty-state">
+                        <div class="empty-state-icon">🐣</div>
+                        <p class="empty-state-text">Soyez le premier à contribuer !</p>
+                    </div>
+                `;
+                return;
+            }
+
+            const sortedContributions = [...contributions].sort((a, b) =>
+                new Date(b.timestamp) - new Date(a.timestamp)
+            );
+
+            list.innerHTML = sortedContributions.slice(0, 15).map(c => `
+                <div class="contribution-item">
+                    <div class="contribution-avatar">${c.anonymous ? '🐣' : '🐓'}</div>
+                    <div class="contribution-details">
+                        <div class="contribution-name">
+                            ${c.anonymous ? 'Contributeur Anonyme' : c.name}
+                        </div>
+                        <div class="contribution-time">${formatTime(c.timestamp)}</div>
+                        ${c.message ? `<div class="contribution-message">"${c.message}"</div>` : ''}
+                    </div>
+                    <div class="contribution-amount">${c.amount.toLocaleString('fr-FR')}</div>
+                </div>
+            `).join('');
+        }
+
+        function formatTime(timestamp) {
+            const date = new Date(timestamp);
+            const now = new Date();
+            const diffMinutes = Math.floor((now - date) / 60000);
+           
+            if (diffMinutes < 1) return 'À l\'instant';
+            if (diffMinutes < 60) return `Il y a ${diffMinutes} min`;
+            if (diffMinutes < 1440) return `Il y a ${Math.floor(diffMinutes / 60)} h`;
+            return `Il y a ${Math.floor(diffMinutes / 1440)} j`;
+        }
+
+        function selectAmount(amount) {
+            document.querySelectorAll('#contributeModal .amount-option').forEach(el => el.classList.remove('selected'));
+            event.target.classList.add('selected');
+            const input = document.getElementById('contributeAmount');
+            if (amount > 0) {
+                input.value = amount;
+            } else {
+                input.value = '';
+                setTimeout(() => input.focus(), 100);
+            }
+        }
+
+        function selectAdminAmount(amount) {
+            document.querySelectorAll('#adminModal .amount-option').forEach(el => el.classList.remove('selected'));
+            event.target.classList.add('selected');
+            const input = document.getElementById('adminAmount');
+            if (amount > 0) {
+                input.value = amount;
+            } else {
+                input.value = '';
+                setTimeout(() => input.focus(), 100);
+            }
+        }
+
+        function openContributeModal() {
+            document.getElementById('contributeModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function openAdminModal() {
+            isAdminAuthenticated = false;
+            document.getElementById('adminLoginSection').style.display = 'block';
+            document.getElementById('adminFormSection').style.display = 'none';
+            document.getElementById('adminPassword').value = '';
+            document.getElementById('adminLoginError').innerHTML = '';
+            document.getElementById('adminModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.remove('active');
+            document.body.style.overflow = '';
+            resetForm(modalId);
+        }
+
+        function resetForm(modalId) {
+            if (modalId === 'contributeModal') {
+                document.getElementById('contributeAmount').value = '';
+                document.getElementById('contributeName').value = '';
+                document.getElementById('contributeMessage').value = '';
+                document.getElementById('anonymousContribute').checked = false;
+                document.getElementById('contributeSuccess').innerHTML = '';
+            } else if (modalId === 'adminModal') {
+                document.getElementById('adminAmount').value = '';
+                document.getElementById('adminName').value = '';
+                document.getElementById('adminPayment').value = 'Espèces';
+                document.getElementById('adminNote').value = '';
+                document.getElementById('anonymousAdmin').checked = false;
+                document.getElementById('adminSuccess').innerHTML = '';
+                isAdminAuthenticated = false;
+            }
+            document.querySelectorAll('.amount-option').forEach(el => el.classList.remove('selected'));
+        }
+
+        function verifyAdminPassword() {
+            const inputPassword = document.getElementById('adminPassword').value;
+            const errorDiv = document.getElementById('adminLoginError');
+
+            if (!inputPassword) {
+                showError(errorDiv, '⚠️ Veuillez entrer le mot de passe');
+                return;
+            }
+
+            if (inputPassword === adminPassword) {
+                isAdminAuthenticated = true;
+                document.getElementById('adminLoginSection').style.display = 'none';
+                document.getElementById('adminFormSection').style.display = 'block';
+                errorDiv.innerHTML = '';
+            } else {
+                showError(errorDiv, '❌ Mot de passe incorrect');
+                document.getElementById('adminPassword').value = '';
+                setTimeout(() => document.getElementById('adminPassword').focus(), 100);
+            }
+        }
+
+        function showError(element, message) {
+            element.innerHTML = `
+                <div style="background: linear-gradient(135deg, #f8d7da, #f5c6cb); border: 2px solid #dc3545; color: #721c24; padding: 12px; border-radius: 8px; margin-top: 12px; text-align: center; font-size: 14px;">
+                    ${message}
+                </div>
+            `;
+        }
+
+        function submitContribution() {
+            const amount = parseInt(document.getElementById('contributeAmount').value);
+            const name = document.getElementById('contributeName').value.trim();
+            const message = document.getElementById('contributeMessage').value.trim();
+            const anonymous = document.getElementById('anonymousContribute').checked;
+
+            if (!amount || amount < 1000) {
+                alert('⚠️ Le montant minimum est de 1,000 FCFA');
+                return;
+            }
+
+            const contribution = {
+                amount: amount,
+                name: anonymous ? 'Anonyme' : (name || 'Contributeur'),
+                message: message,
+                anonymous: anonymous,
+                timestamp: new Date().toISOString(),
+                type: 'public'
+            };
+
+            addContribution(contribution);
+
+            document.getElementById('contributeSuccess').innerHTML = `
+                <div class="success-message">
+                    ✅ Merci infiniment !<br>
+                    Contribution de <strong>${amount.toLocaleString('fr-FR')} FCFA</strong> enregistrée.<br>
+                    <small>Veuillez effectuer le paiement auprès de la coordinatrice.</small>
+                </div>
+            `;
+
+            setTimeout(() => closeModal('contributeModal'), 3000);
+        }
+
+        function submitAdminContribution() {
+            if (!isAdminAuthenticated) {
+                alert('❌ Session expirée. Veuillez vous reconnecter.');
+                openAdminModal();
+                return;
+            }
+
+            const amount = parseInt(document.getElementById('adminAmount').value);
+            const name = document.getElementById('adminName').value.trim();
+            const payment = document.getElementById('adminPayment').value;
+            const note = document.getElementById('adminNote').value.trim();
+            const anonymous = document.getElementById('anonymousAdmin').checked;
+
+            if (!amount || amount < 1000) {
+                alert('⚠️ Le montant minimum est de 1,000 FCFA');
+                return;
+            }
+
+            if (!name) {
+                alert('⚠️ Veuillez entrer le nom du contributeur');
+                return;
+            }
+
+            const contribution = {
+                amount: amount,
+                name: anonymous ? 'Anonyme' : name,
+                message: note,
+                anonymous: anonymous,
+                timestamp: new Date().toISOString(),
+                type: 'admin',
+                payment: payment
+            };
+
+            addContribution(contribution);
+
+            document.getElementById('adminSuccess').innerHTML = `
+                <div class="success-message">
+                    ✅ Contribution enregistrée !<br>
+                    <strong>${amount.toLocaleString('fr-FR')} FCFA</strong> - ${payment}
+                </div>
+            `;
+
+            setTimeout(() => closeModal('adminModal'), 2500);
+        }
+
+        function addContribution(contribution) {
+            contributions.push(contribution);
+            totalRaised += contribution.amount;
+            localStorage.setItem('contributions', JSON.stringify(contributions));
+            updateDisplay();
+            displayContributions();
+        }
+
+        function exportData() {
+            const data = {
+                totalRaised: totalRaised,
+                goal: GOAL_AMOUNT,
+                initialAmount: INITIAL_AMOUNT,
+                contributorCount: contributions.length,
+                contributions: contributions.map(c => ({
+                    ...c,
+                    dateReadable: new Date(c.timestamp).toLocaleString('fr-FR')
+                })),
+                exportDate: new Date().toISOString(),
+                exportDateReadable: new Date().toLocaleString('fr-FR')
+            };
+
+            const csv = generateCSV(contributions);
+            downloadFile(csv, `avi-cososo-${new Date().toISOString().split('T')[0]}.csv`, 'text/csv');
+           
+            alert('📊 Données exportées avec succès !');
+        }
+
+        function generateCSV(data) {
+            const headers = ['Date', 'Nom', 'Montant (FCFA)', 'Mode', 'Type', 'Message'];
+            const rows = data.map(c => [
+                new Date(c.timestamp).toLocaleString('fr-FR'),
+                c.name,
+                c.amount,
+                c.payment || 'N/A',
+                c.type || 'public',
+                (c.message || '').replace(/,/g, ';')
+            ]);
+           
+            return [headers, ...rows].map(row => row.join(',')).join('\n');
+        }
+
+        function downloadFile(content, filename, type) {
+            const blob = new Blob([content], { type: type });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = filename;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+
+        function showStats() {
+            const totalAmount = contributions.reduce((sum, c) => sum + c.amount, 0);
+            const avgAmount = contributions.length > 0 ? totalAmount / contributions.length : 0;
+            const maxContribution = contributions.length > 0 ? Math.max(...contributions.map(c => c.amount)) : 0;
+            const publicCount = contributions.filter(c => c.type === 'public').length;
+            const adminCount = contributions.filter(c => c.type === 'admin').length;
+            const paymentModes = {};
+            contributions.forEach(c => {
+                if (c.payment) {
+                    paymentModes[c.payment] = (paymentModes[c.payment] || 0) + 1;
+                }
+            });
+
+            let statsText = `📈 STATISTIQUES DÉTAILLÉES\n\n`;
+            statsText += `💰 Total collecté : ${totalRaised.toLocaleString('fr-FR')} FCFA\n`;
+            statsText += `🎯 Phase 1 : ${INITIAL_AMOUNT.toLocaleString('fr-FR')} FCFA\n`;
+            statsText += `🎯 Phase 2 (objectif) : ${GOAL_AMOUNT.toLocaleString('fr-FR')} FCFA\n`;
+            statsText += `📊 Progression Phase 2 : ${(((totalRaised - INITIAL_AMOUNT) / GOAL_AMOUNT) * 100).toFixed(1)}%\n\n`;
+            statsText += `👥 Contributeurs : ${contributions.length}\n`;
+            statsText += `📱 Contrib. publiques : ${publicCount}\n`;
+            statsText += `🔐 Contrib. admin : ${adminCount}\n\n`;
+            statsText += `💵 Moyenne : ${avgAmount.toLocaleString('fr-FR')} FCFA\n`;
+            statsText += `🏆 Plus grande : ${maxContribution.toLocaleString('fr-FR')} FCFA\n`;
+            statsText += `📅 Jours restants : ${document.getElementById('daysLeft').textContent}\n\n`;
+           
+            if (Object.keys(paymentModes).length > 0) {
+                statsText += `💳 Modes de paiement :\n`;
+                Object.entries(paymentModes).forEach(([mode, count]) => {
+                    statsText += `   • ${mode} : ${count}\n`;
+                });
+            }
+
+            alert(statsText);
+        }
+
+        function resetData() {
+            if (!confirm('⚠️ ATTENTION !\n\nVoulez-vous vraiment réinitialiser toutes les données ?\n\nCette action supprimera :\n- Toutes les contributions\n- Le total collecté\n- L\'historique complet\n\nCette action est IRRÉVERSIBLE !')) {
+                return;
+            }
+
+            if (!confirm('🔴 DERNIÈRE CONFIRMATION\n\nÊtes-vous absolument certain ?\n\nIl est recommandé d\'exporter les données avant de réinitialiser.')) {
+                return;
+            }
+
+            contributions = [];
+            totalRaised = INITIAL_AMOUNT;
+            localStorage.setItem('contributions', JSON.stringify(contributions));
+            updateDisplay();
+            displayContributions();
+           
+            alert('✅ Données réinitialisées avec succès !\n\nLe compteur est revenu à 300,000 FCFA (Phase 1).');
+        }
+
+        function changePassword() {
+            const current = document.getElementById('currentPassword').value;
+            const newPass = document.getElementById('newPassword').value;
+            const confirm = document.getElementById('confirmPassword').value;
+            const resultDiv = document.getElementById('passwordChangeResult');
+
+            if (!current || !newPass || !confirm) {
+                showError(resultDiv, '⚠️ Veuillez remplir tous les champs');
+                return;
+            }
+
+            if (current !== adminPassword) {
+                showError(resultDiv, '❌ Mot de passe actuel incorrect');
+                return;
+            }
+
+            if (newPass.length < 6) {
+                showError(resultDiv, '⚠️ Le nouveau mot de passe doit contenir au moins 6 caractères');
+                return;
+            }
+
+            if (newPass !== confirm) {
+                showError(resultDiv, '❌ Les mots de passe ne correspondent pas');
+                return;
+            }
+
+            adminPassword = newPass;
+            localStorage.setItem('adminPassword', adminPassword);
+
+            resultDiv.innerHTML = `
+                <div class="success-message">
+                    ✅ Mot de passe modifié avec succès !
+                </div>
+            `;
+
+            setTimeout(() => closeModal('passwordModal'), 2000);
+        }
+
+        // Fermeture des modals en cliquant à l'extérieur
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        }
+
+        // Gestion du bouton retour sur Android
+        window.addEventListener('popstate', function() {
+            const activeModal = document.querySelector('.modal.active');
+            if (activeModal) {
+                activeModal.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+
+        // Ajout du bouton de changement de mot de passe (accessible via triple-tap sur le titre admin)
+        let tapCount = 0;
+        let tapTimer;
+        document.querySelector('.admin-title').addEventListener('click', function() {
+            tapCount++;
+            clearTimeout(tapTimer);
+           
+            if (tapCount === 3) {
+                document.getElementById('passwordModal').classList.add('active');
+                document.body.style.overflow = 'hidden';
+                tapCount = 0;
+            }
+           
+            tapTimer = setTimeout(() => { tapCount = 0; }, 500);
+        });
+    </script>
+</body>
+</html>]
