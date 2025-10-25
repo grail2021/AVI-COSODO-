@@ -1,0 +1,2682 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AVI-COSOSO - Initiative Avicole Solidaire du Paysage Ndoubock, Région du Ndé, Cameroun">
+    <title>AVI-COSOSO | Initiative Avicole Solidaire - Paysage Ndoubock</title>
+    <style>
+        /* Reset et Configuration de Base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --amber-50: #fffbeb;
+            --amber-100: #fef3c7;
+            --amber-700: #b45309;
+            --amber-800: #92400e;
+            --orange-50: #fff7ed;
+            --orange-100: #ffedd5;
+            --orange-200: #fed7aa;
+            --orange-600: #ea580c;
+            --orange-700: #c2410c;
+            --green-50: #f0fdf4;
+            --green-100: #dcfce7;
+            --green-600: #16a34a;
+            --green-700: #15803d;
+            --green-800: #166534;
+            --blue-50: #eff6ff;
+            --blue-100: #dbeafe;
+            --blue-600: #2563eb;
+            --blue-700: #1d4ed8;
+            --blue-800: #1e40af;
+            --red-50: #fef2f2;
+            --red-200: #fecaca;
+            --red-600: #dc2626;
+            --red-800: #991b1b;
+            --gray-50: #f9fafb;
+            --gray-100: #f3f4f6;
+            --gray-600: #4b5563;
+            --gray-700: #374151;
+            --gray-800: #1f2937;
+            --purple-50: #faf5ff;
+            --purple-200: #e9d5ff;
+            --purple-600: #9333ea;
+            --purple-800: #6b21a8;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--gray-800);
+            background: linear-gradient(135deg, var(--amber-50) 0%, var(--orange-50) 50%, var(--amber-100) 100%);
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        /* Header Hero */
+        .hero {
+            background: linear-gradient(135deg, var(--amber-800) 0%, var(--orange-700) 50%, var(--amber-700) 100%);
+            color: white;
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+
+        .hero-emoji {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            margin-bottom: 1.5rem;
+            opacity: 0.95;
+        }
+
+        .hero-location {
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            opacity: 0.85;
+            font-style: italic;
+        }
+
+        .hero-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .badge {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .pulse-dot {
+            width: 12px;
+            height: 12px;
+            background: #4ade80;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        /* Navigation */
+        .nav-container {
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(8px);
+            border-bottom: 2px solid var(--orange-200);
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+            display: flex;
+            gap: 0.5rem;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .nav::-webkit-scrollbar {
+            height: 4px;
+        }
+
+        .nav::-webkit-scrollbar-track {
+            background: var(--gray-100);
+        }
+
+        .nav::-webkit-scrollbar-thumb {
+            background: var(--orange-600);
+            border-radius: 2px;
+        }
+
+        .nav-btn {
+            white-space: nowrap;
+            padding: 0.75rem 1.25rem;
+            border: none;
+            border-radius: 2rem;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: transparent;
+            color: var(--orange-700);
+        }
+
+        .nav-btn:hover {
+            background: var(--orange-100);
+        }
+
+        .nav-btn.active {
+            background: var(--orange-600);
+            color: white;
+            box-shadow: 0 4px 12px rgba(234, 88, 12, 0.3);
+        }
+
+        /* Container Principal */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        /* Sections */
+        .section {
+            display: none;
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        .section.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--amber-800);
+            margin-bottom: 3rem;
+        }
+
+        /* Cards */
+        .card {
+            background: white;
+            border-radius: 1.5rem;
+            padding: 2rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            border: 2px solid var(--orange-200);
+            margin-bottom: 2rem;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--amber-800);
+            margin-bottom: 1rem;
+        }
+
+        .card-content {
+            color: var(--gray-700);
+            line-height: 1.8;
+        }
+
+        /* Grid Layout */
+        .grid {
+            display: grid;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .grid-2 {
+            grid-template-columns: 1fr;
+        }
+
+        .grid-3 {
+            grid-template-columns: 1fr;
+        }
+
+        .grid-4 {
+            grid-template-columns: 1fr;
+        }
+
+        @media (min-width: 768px) {
+            .grid-2 { grid-template-columns: repeat(2, 1fr); }
+            .grid-3 { grid-template-columns: repeat(2, 1fr); }
+            .grid-4 { grid-template-columns: repeat(2, 1fr); }
+            .hero h1 { font-size: 3.5rem; }
+            .section-title { font-size: 2.5rem; }
+        }
+
+        @media (min-width: 1024px) {
+            .grid-3 { grid-template-columns: repeat(3, 1fr); }
+            .grid-4 { grid-template-columns: repeat(4, 1fr); }
+            .hero h1 { font-size: 4rem; }
+        }
+
+        /* Gradient Cards */
+        .gradient-card {
+            background: linear-gradient(135deg, var(--green-50) 0%, var(--green-100) 100%);
+            border: 2px solid var(--green-600);
+        }
+
+        .gradient-card-blue {
+            background: linear-gradient(135deg, var(--blue-50) 0%, var(--blue-100) 100%);
+            border: 2px solid var(--blue-600);
+        }
+
+        .gradient-card-orange {
+            background: linear-gradient(135deg, var(--orange-50) 0%, var(--orange-100) 100%);
+            border: 2px solid var(--orange-600);
+        }
+
+        /* Stats Cards */
+        .stat-card {
+            text-align: center;
+            padding: 1.5rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        }
+
+        .stat-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--amber-800);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--gray-700);
+            margin-bottom: 0.25rem;
+        }
+
+        .stat-description {
+            font-size: 0.9rem;
+            color: var(--gray-600);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-detail {
+            font-size: 0.75rem;
+            color: var(--orange-600);
+            font-style: italic;
+        }
+
+        /* Lists */
+        .custom-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .custom-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+            padding: 0.75rem;
+            background: var(--gray-50);
+            border-radius: 0.5rem;
+            transition: background 0.2s ease;
+        }
+
+        .custom-list li:hover {
+            background: var(--orange-50);
+        }
+
+        .list-icon {
+            flex-shrink: 0;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        /* Budget Table */
+        .budget-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            background: var(--gray-50);
+            border-radius: 0.75rem;
+            margin-bottom: 0.75rem;
+            transition: all 0.2s ease;
+        }
+
+        .budget-item:hover {
+            background: var(--orange-50);
+            transform: translateX(5px);
+        }
+
+        .budget-label {
+            flex: 1;
+        }
+
+        .budget-title {
+            font-weight: 600;
+            color: var(--gray-800);
+            margin-bottom: 0.25rem;
+        }
+
+        .budget-subtitle {
+            font-size: 0.75rem;
+            color: var(--gray-600);
+        }
+
+        .budget-amount {
+            font-weight: 800;
+            font-size: 1.1rem;
+            color: var(--amber-800);
+            white-space: nowrap;
+            margin-left: 1rem;
+        }
+
+        /* Progress Bar */
+        .progress-container {
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 1rem;
+            height: 1.5rem;
+            overflow: hidden;
+            margin: 1rem 0;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: white;
+            border-radius: 1rem;
+            transition: width 1s ease-out;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.85rem;
+        }
+
+        /* Technical Specs */
+        .phase-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 2rem;
+            border: 2px solid var(--orange-200);
+            margin-bottom: 2rem;
+        }
+
+        .phase-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--amber-800);
+            margin-bottom: 1.5rem;
+        }
+
+        .phase-grid {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .phase-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .phase-section {
+            background: var(--gray-50);
+            padding: 1.25rem;
+            border-radius: 0.75rem;
+        }
+
+        .phase-section-title {
+            font-weight: 600;
+            color: var(--gray-800);
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Table */
+        .table-container {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            border-radius: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+        }
+
+        thead {
+            background: var(--red-50);
+        }
+
+        th {
+            padding: 1rem;
+            text-align: left;
+            font-weight: 700;
+            color: var(--red-800);
+            border-bottom: 2px solid var(--red-200);
+        }
+
+        td {
+            padding: 1rem;
+            border-bottom: 1px solid var(--gray-200);
+        }
+
+        tbody tr:nth-child(even) {
+            background: var(--gray-50);
+        }
+
+        tbody tr:hover {
+            background: var(--orange-50);
+        }
+
+        /* FAQ */
+        .faq-item {
+            background: white;
+            border: 2px solid var(--orange-200);
+            border-radius: 1rem;
+            margin-bottom: 0.75rem;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 1.25rem;
+            background: transparent;
+            border: none;
+            text-align: left;
+            font-weight: 600;
+            color: var(--gray-800);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.2s ease;
+        }
+
+        .faq-question:hover {
+            background: var(--orange-50);
+        }
+
+        .faq-icon {
+            font-size: 1.25rem;
+            color: var(--orange-600);
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.open .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            color: var(--gray-700);
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
+
+        .faq-item.open .faq-answer {
+            max-height: 1000px;
+            padding: 0 1.25rem 1.25rem 1.25rem;
+        }
+
+        /* CTA Buttons */
+        .cta-button {
+            width: 100%;
+            padding: 1.25rem 2rem;
+            border: none;
+            border-radius: 1rem;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .cta-primary {
+            background: var(--orange-600);
+            color: white;
+        }
+
+        .cta-primary:hover {
+            background: var(--orange-700);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(234, 88, 12, 0.3);
+        }
+
+        .cta-secondary {
+            background: var(--green-600);
+            color: white;
+        }
+
+        .cta-secondary:hover {
+            background: var(--green-700);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(22, 163, 74, 0.3);
+        }
+
+        .cta-tertiary {
+            background: var(--blue-600);
+            color: white;
+        }
+
+        .cta-tertiary:hover {
+            background: var(--blue-700);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+        }
+
+        /* Contact Cards */
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.25rem;
+            border-radius: 0.75rem;
+            transition: transform 0.2s ease;
+        }
+
+        .contact-item:hover {
+            transform: translateX(5px);
+        }
+
+        .contact-icon {
+            width: 3.5rem;
+            height: 3.5rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.75rem;
+            flex-shrink: 0;
+        }
+
+        .contact-info {
+            flex: 1;
+        }
+
+        .contact-title {
+            font-weight: 600;
+            color: var(--gray-800);
+            margin-bottom: 0.25rem;
+        }
+
+        .contact-detail {
+            font-size: 0.9rem;
+            color: var(--gray-600);
+        }
+
+        /* Footer */
+        .footer {
+            background: linear-gradient(135deg, var(--amber-800) 0%, var(--orange-800) 50%, var(--amber-800) 100%);
+            color: black;
+            padding: 3rem 1rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .footer-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .footer-section h4 {
+            font-weight: 700;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section li {
+            margin-bottom: 0.5rem;
+            opacity: 0.9;
+            font-size: 0.9rem;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Print Styles */
+        @media print {
+            .nav-container,
+            .cta-button,
+            .faq-icon {
+                display: none;
+            }
+
+            .section {
+                display: block !important;
+                page-break-after: always;
+            }
+
+            .card,
+            .phase-card,
+            .faq-item {
+                page-break-inside: avoid;
+            }
+
+            body {
+                background: white;
+            }
+
+            .hero,
+            .footer {
+                background: var(--amber-800) !important;
+            }
+        }
+
+        /* Utility Classes */
+        .text-center { text-align: center; }
+        .mb-1 { margin-bottom: 0.5rem; }
+        .mb-2 { margin-bottom: 1rem; }
+        .mb-3 { margin-bottom: 1.5rem; }
+        .mb-4 { margin-bottom: 2rem; }
+        .mt-2 { margin-top: 1rem; }
+        .font-bold { font-weight: 700; }
+        .text-sm { font-size: 0.9rem; }
+        .text-xs { font-size: 0.8rem; }
+        .opacity-80 { opacity: 0.8; }
+        .italic { font-style: italic; }
+    </style>
+</head>
+<body>
+    <!-- Header Hero -->
+    <header class="hero">
+        <div class="hero-emoji">🐓</div>
+        <h1>AVI-COSOSO</h1>
+        <p class="hero-subtitle">Initiative Avicole Solidaire du Paysage Ndoubock</p>
+        <p class="hero-location">Grassfields méridional, Hautes Terres de l'Ouest Cameroun</p>
+        <div class="hero-badges">
+            <span class="badge">
+                <div class="pulse-dot"></div>
+                Projet Phase 2 en cours
+            </span>
+            <span class="badge">
+                62.5% Phase 1 complétée
+            </span>
+            <span class="badge">
+                🏆 Modèle réplicable
+            </span>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="nav-container">
+        <div class="nav">
+            <button class="nav-btn active" onclick="showSection('contexte')">Contexte</button>
+            <button class="nav-btn" onclick="showSection('diagnostic')">Diagnostic</button>
+            <button class="nav-btn" onclick="showSection('modele')">Le Modèle</button>
+            <button class="nav-btn" onclick="showSection('technique')">Aspects Techniques</button>
+            <button class="nav-btn" onclick="showSection('impact')">Impact</button>
+            <button class="nav-btn" onclick="showSection('investissement')">Investissement</button>
+            <button class="nav-btn" onclick="showSection('gouvernance')">Gouvernance</button>
+            <button class="nav-btn" onclick="showSection('durabilite')">Durabilité</button>
+            <button class="nav-btn" onclick="showSection('action')">Agir</button>
+        </div>
+    </nav>
+
+    <!-- Container Principal -->
+    <main class="container">
+        <!-- Section Contexte -->
+        <section id="contexte" class="section active">
+            <h2 class="section-title">🌍 Contexte Géographique et Socio-économique</h2>
+
+            <div class="card">
+                <h3 class="card-title">Le Paysage Ndoubock</h3>
+                <div class="grid grid-2">
+                    <div>
+                        <h4 class="font-bold mb-2">Caractéristiques géographiques</h4>
+                        <ul class="custom-list">
+                            <li>
+                                <span class="list-icon" style="color: var(--green-600);">▸</span>
+                                <span>Hautes terres (1200-1600m altitude)</span>
+                            </li>
+                            <li>
+                                <span class="list-icon" style="color: var(--green-600);">▸</span>
+                                <span>Climat tropical humide (1500-2000mm/an)</span>
+                            </li>
+                            <li>
+                                <span class="list-icon" style="color: var(--green-600);">▸</span>
+                                <span>Sols ferralitiques fertiles</span>
+                            </li>
+                            <li>
+                                <span class="list-icon" style="color: var(--green-600);">▸</span>
+                                <span>Végétation savane arborée et galeries forestières</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold mb-2">Contexte socio-économique</h4>
+                        <ul class="custom-list">
+                            <li>
+                                <span class="list-icon" style="color: var(--orange-600);">▸</span>
+                                <span>Exode rural massif vers centres urbains</span>
+                            </li>
+                            <li>
+                                <span class="list-icon" style="color: var(--orange-600);">▸</span>
+                                <span>Pauvreté monétaire >70% de la population</span>
+                            </li>
+                            <li>
+                                <span class="list-icon" style="color: var(--orange-600);">▸</span>
+                                <span>Insécurité alimentaire chronique</span>
+                            </li>
+                            <li>
+                                <span class="list-icon" style="color: var(--orange-600);">▸</span>
+                                <span>Systèmes agricoles traditionnels peu productifs</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-3">
+                <div class="card gradient-card" style="background: linear-gradient(135deg, #fef2f2 0%, #fecaca 100%); border-color: var(--red-600);">
+                    <div class="text-center">
+                        <div style="font-size: 3rem; margin-bottom: 1rem;">🏥</div>
+                        <h4 class="font-bold" style="color: var(--red-800); margin-bottom: 1rem;">Santé publique</h4>
+                        <ul class="text-sm" style="text-align: left;">
+                            <li class="mb-1">• Anémie chez femmes enceintes (>60%)</li>
+                            <li class="mb-1">• Malnutrition protéino-énergétique infantile</li>
+                            <li class="mb-1">• Rachitisme et retard de croissance</li>
+                            <li class="mb-1">• Carence en fer et vitamines</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card gradient-card-blue">
+                    <div class="text-center">
+                        <div style="font-size: 3rem; margin-bottom: 1rem;">📉</div>
+                        <h4 class="font-bold" style="color: var(--blue-800); margin-bottom: 1rem;">Économie locale</h4>
+                        <ul class="text-sm" style="text-align: left;">
+                            <li class="mb-1">• Revenus agricoles <50,000 FCFA/mois</li>
+                            <li class="mb-1">• Dépendance aide extérieure</li>
+                            <li class="mb-1">• Absence filières structurées</li>
+                            <li class="mb-1">• Migration économique forcée</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card" style="background: linear-gradient(135deg, #faf5ff 0%, #e9d5ff 100%); border-color: var(--purple-600);">
+                    <div class="text-center">
+                        <div style="font-size: 3rem; margin-bottom: 1rem;">🤝</div>
+                        <h4 class="font-bold" style="color: var(--purple-800); margin-bottom: 1rem;">Tissu social</h4>
+                        <ul class="text-sm" style="text-align: left;">
+                            <li class="mb-1">• Érosion solidarités traditionnelles</li>
+                            <li class="mb-1">• Déstructuration Nsieuh ancestraux</li>
+                            <li class="mb-1">• Perte savoirs agro-pastoraux</li>
+                            <li class="mb-1">• Vieillissement population rurale</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Diagnostic -->
+        <section id="diagnostic" class="section">
+            <h2 class="section-title">🔍 Diagnostic Participatif et Analyse FFOM</h2>
+
+            <div class="grid grid-2">
+                <div class="card gradient-card">
+                    <h3 class="card-title" style="color: var(--green-800); display: flex; align-items: center; gap: 0.5rem;">
+                        <span style="font-size: 1.5rem;">💪</span> Forces
+                    </h3>
+                    <ul class="custom-list">
+                        <li>
+                            <span class="list-icon" style="color: var(--green-600);">✓</span>
+                            <span>Tradition avicole villageoise ancestrale</span>
+                        </li>
+                        <li>
+                            <span class="list-icon" style="color: var(--green-600);">✓</span>
+                            <span>Disponibilité ressources alimentaires locales (manioc, maïs)</span>
+                        </li>
+                        <li>
+                            <span class="list-icon" style="color: var(--green-600);">✓</span>
+                            <span>Infrastructure de base COSODO opérationnelle</span>
+                        </li>
+                        <li>
+                            <span class="list-icon" style="color: var(--green-600);">✓</span>
+                            <span>Leadership communautaire engagé</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="card" style="background: linear-gradient(135deg, #fef2f2 0%, #fed7aa 100%); border-color: var(--red-600);">
+                    <h3 class="card-title" style="color: var(--red-800); display: flex; align-items: center; gap: 0.5rem;">
+                        <span style="font-size: 1.5rem;">⚠️</span> Faiblesses
+                    </h3>
+                    <ul class="custom-list">
+                        <li>
+                            <span class="list-icon" style="color: var(--red-600);">✗</span>
+                            <span>Compétences techniques avicoles modernes limitées</span>
+                        </li>
+                        <li>
+                            <span class="list-icon" style="color: var(--red-600);">✗</span>
+                            <span>Capital initial insuffisant</span>
+                        </li>
+                        <li>
+                            <span class="list-icon" style="color: var(--red-600);">✗</span>
+                            <span>Absence circuits commercialisation structurés</span>
+                        </li>
+                        <li>
+                            <span class="list-icon" style="color: var(--red-600);">✗</span>
+                            <span>Infrastructures vétérinaires éloignées</span>
+                        </li>
+                        <li>
+                            <span class="list-icon" style="color: var(--red-600);">✗</span>
+                            <span>Faible accès crédit agricole formel</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="card gradient-card-blue">
+                    <h3 class="card-title" style="color: var(--blue-800); display: flex; align-items: center; gap: 0.5rem;">
+                        <span style="font-size: 1.5rem;">🌟</span> Opportunités
+                    </h3>
+                    <ul class="custom-list">
+                        <li>
+                            <span class="list-icon" style="color: var(--blue-600);">→</span>
+                            <span>Demande urbaine croissante pour poulet bio</span>
+                        </li>
+                        <li>
+                            <span class="list-icon" style="color: var(--blue-600);">→</span>
+                            <span>Prix premium produits biologiques (+30-50%)</span>
+                        </li>
+                        <li>
+                            <span class="list-icon" style="color: var(--blue-600);">→</span>
+                            <span>Politiques gouvernementales pro-aviculture</span>
+                        </li>
+                        <li>
+                            <span class="list-icon" style="color: var(--blue-600);">→</span>
+                            <span>Intérêt ONG et bailleurs développement rural</span>
+                        </li>
+                        <li>
+                            <span class="list-icon" style="color: var(--blue-600);">→</span>
+                            <span>Diaspora Ndoubock engagée et solvable</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="card" style="background: linear-gradient(135deg, #fefce8 0%, #fef3c7 100%); border-color: #eab308;">
+                    <h3 class="card-title" style="color: #854d0e; display: flex; align-items: center; gap: 0.5rem;">
+                        <span style="font-size: 1.5rem;">⚡</span> Menaces
+                    </h3>
+                    <ul class="custom-list">
+                        <li>
+                            <span class="list-icon" style="color: #a16207;">!</span>
+                            <span>Épizooties aviaires (Newcastle, Gumboro)</span>
+                        </li>
+                        <li>
+                            <span class="list-icon" style="color: #a16207;">!</span>
+                            <span>Concurrence poulet industriel importé</span>
+                        </li>
+                        <li>
+                            <span class="list-icon" style="color: #a16207;">!</span>
+                            <span>Changement climatique (variabilité pluviométrique)</span>
+                        </li>
+                        <li>
+                            <span class="list-icon" style="color: #a16207;">!</span>
+                            <span>Volatilité prix intrants (aliments, poussins)</span>
+                        </li>
+                        <li>
+                            <span class="list-icon" style="color: #a16207;">!</span>
+                            <span>Risque essoufflement dynamique collective</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card gradient-card-orange">
+                <h3 class="card-title text-center" style="color: var(--amber-800);">🎯 Stratégie d'Intervention AVI-COSOSO</h3>
+                <p class="card-content text-center" style="max-width: 900px; margin: 0 auto;">
+                    Face à ce diagnostic, AVI-COSOSO adopte une stratégie de <strong>valorisation des forces endogènes</strong>
+                    (Nsieuh, savoirs locaux) combinée à des <strong>innovations techniques exogènes</strong> (amélioration génétique,
+                    prophylaxie moderne, alimentation optimisée). L'approche vise à <strong>transformer les opportunités de marché</strong>
+                    en revenus communautaires tout en <strong>atténuant les menaces</strong> par la mutualisation des risques et
+                    l'accompagnement technique continu.
+                </p>
+            </div>
+        </section>
+
+        <!-- Section Modèle -->
+        <section id="modele" class="section">
+            <h2 class="section-title">🔄 Modèle d'Intervention Intégré</h2>
+
+            <div class="grid grid-3">
+                <div class="card" style="border: 3px solid var(--orange-600);">
+                    <div class="stat-icon">🐣</div>
+                    <h3 class="card-title text-center">Phase 1 : Production</h3>
+                    <p class="card-content text-sm mb-3">
+                        Unité de reproduction communautaire équipée de systèmes de chauffage modernes (fours charbon/bois).
+                        Production centralisée de poussins d'un jour avec accompagnement jusqu'à 21 jours en poussinière.
+                    </p>
+                    <div class="text-center" style="background: var(--orange-50); padding: 0.75rem; border-radius: 0.5rem; font-size: 0.8rem;">
+                        <strong>Acteurs :</strong> Coordinatrice COSODO + 2 agents d'élevage formés (AZV)
+                    </div>
+                </div>
+
+                <div class="card" style="border: 3px solid var(--green-600);">
+                    <div class="stat-icon">👥</div>
+                    <h3 class="card-title text-center">Phase 2 : Distribution</h3>
+                    <p class="card-content text-sm mb-3">
+                        Distribution décentralisée aux groupes Nsieuh de poussins de 21 jours. Formation technique (prophylaxie,
+                        alimentation, habitat) et accompagnement de proximité bimensuel par agents d'élevage.
+                    </p>
+                    <div class="text-center" style="background: var(--green-50); padding: 0.75rem; border-radius: 0.5rem; font-size: 0.8rem;">
+                        <strong>Acteurs :</strong> Groupes Nsieuh (10-15 membres/groupe) + techniciens
+                    </div>
+                </div>
+
+                <div class="card" style="border: 3px solid var(--blue-600);">
+                    <div class="stat-icon">🛒</div>
+                    <h3 class="card-title text-center">Phase 3 : Commercialisation</h3>
+                    <p class="card-content text-sm mb-3">
+                        Engraissement jusqu'à poids commercial (3,5-4kg) puis commercialisation via réseau solidaire COSODO (COSODO Hub.
+                        Circuits courts (marchés locaux) et contrats avec restauration urbaine.
+                    </p>
+                    <div class="text-center" style="background: var(--blue-50); padding: 0.75rem; border-radius: 0.5rem; font-size: 0.8rem;">
+                        <strong>Acteurs :</strong> Coopérative COSODO + diaspora + partenaires commerciaux
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" style="background: linear-gradient(135deg, #faf5ff 0%, #fce7f3 100%); border-color: var(--purple-600);">
+                <h3 class="card-title text-center" style="color: var(--purple-800);">🏗️ Infrastructures et Équipements Disponibles</h3>
+                <div class="grid grid-3">
+                    <div>
+                        <h4 class="font-bold mb-2">Poussinière (Phase 1)</h4>
+                        <ul class="text-sm">
+                            <li class="mb-1">✓ 2 fours chauffage (1000 poussins)</li>
+                            <li class="mb-1">✓ Salle chauffage 18m² (180-200 sujets)</li>
+                            <li class="mb-1">✓ 4 abreuvoirs 2ème âge</li>
+                            <li class="mb-1">✓ 3 mangeoires linéaires</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold mb-2">Élevage communautaire</h4>
+                        <ul class="text-sm">
+                            <li class="mb-1">✓ Poulaillers familiaux adaptés</li>
+                            <li class="mb-1">✓ Parcours herbeux clôturés</li>
+                            <li class="mb-1">✓ Points d'eau aménagés</li>
+                            <li class="mb-1" style="color: var(--orange-600);">⚠ Amélioration continue nécessaire</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold mb-2">Support logistique</h4>
+                        <ul class="text-sm">
+                            <li class="mb-1">✓ Dispositif de conditionnement et distribution de produits et susbtances pharmaceutiques vétérinaires COSODO</li>
+                            <li class="mb-1">✓ Stock stratégique aliments (approvisionnement groupé)</li>
+                            <li class="mb-1">✓ Réseau transport local</li>
+                            <li class="mb-1" style="color: #eab308;">○ Chambre froide et dispositif de séchage et de fumage (projet)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title text-center">🌀 Circuit de Valeur Intégré</h3>
+                <div style="display: flex; flex-direction: column; gap: 1rem;">
+                    <div style="display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;">
+                        <div style="background: var(--orange-100); color: var(--orange-800); padding: 0.75rem 1.25rem; border-radius: 0.75rem; font-weight: 700; min-width: 140px; text-align: center;">
+                            Intrants
+                        </div>
+                        <span style="color: var(--orange-600); font-size: 1.5rem;">→</span>
+                        <div style="flex: 1; background: var(--gray-50); padding: 0.75rem; border-radius: 0.5rem; font-size: 0.9rem; min-width: 200px;">
+                            Poussins certifiés • Aliments • Produits vétérinaires et plantes pharmaceutiques alternatives • Litière • Énergie
+                        </div>
+                    </div>
+                   
+                    <div style="display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;">
+                        <div style="background: var(--green-100); color: var(--green-800); padding: 0.75rem 1.25rem; border-radius: 0.75rem; font-weight: 700; min-width: 140px; text-align: center;">
+                            Production
+                        </div>
+                        <span style="color: var(--green-600); font-size: 1.5rem;">→</span>
+                        <div style="flex: 1; background: var(--gray-50); padding: 0.75rem; border-radius: 0.5rem; font-size: 0.9rem; min-width: 200px;">
+                            Poussinière COSODO (0-21j) → Élevage Nsieuh (22-120j) → Poulets 3,5-4+kg
+                        </div>
+                    </div>
+                   
+                    <div style="display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;">
+                        <div style="background: var(--blue-100); color: var(--blue-800); padding: 0.75rem 1.25rem; border-radius: 0.75rem; font-weight: 700; min-width: 140px; text-align: center;">
+                            Transformation
+                        </div>
+                        <span style="color: var(--blue-600); font-size: 1.5rem;">→</span>
+                        <div style="flex: 1; background: var(--gray-50); padding: 0.75rem; border-radius: 0.5rem; font-size: 0.9rem; min-width: 200px;">
+                            Abattage artisanal • Conditionnement • Étiquetage bio • Traçabilité
+                        </div>
+                    </div>
+                   
+                    <div style="display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;">
+                        <div style="background: #e9d5ff; color: var(--purple-800); padding: 0.75rem 1.25rem; border-radius: 0.75rem; font-weight: 700; min-width: 140px; text-align: center;">
+                            Commerce
+                        </div>
+                        <span style="color: var(--purple-600); font-size: 1.5rem;">→</span>
+                        <div style="flex: 1; background: var(--gray-50); padding: 0.75rem; border-radius: 0.5rem; font-size: 0.9rem; min-width: 200px;">
+                            Marchés locaux • Restaurants • Diaspora • Paniers solidaires urbains
+                        </div>
+                    </div>
+
+                    <div style="display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;">
+                        <div style="background: var(--amber-100); color: var(--amber-800); padding: 0.75rem 1.25rem; border-radius: 0.75rem; font-weight: 700; min-width: 140px; text-align: center;">
+                            Réinvestissement
+                        </div>
+                        <span style="color: var(--amber-600); font-size: 1.5rem;">→</span>
+                        <div style="flex: 1; background: var(--gray-50); padding: 0.75rem; border-radius: 0.5rem; font-size: 0.9rem; min-width: 200px;">
+                            Fonds roulement • Infrastructures • Formation • Extension nouveaux Nsieuh
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Technique -->
+        <section id="technique" class="section">
+            <h2 class="section-title">🔬 Spécifications Techniques et Itinéraire d'Élevage</h2>
+
+            <div class="phase-card">
+                <h3 class="phase-title">Démarrage (0-21 jours)</h3>
+                <div class="phase-grid">
+                    <div>
+                        <div class="phase-section-title">🎯 Activités clés</div>
+                        <ul class="custom-list">
+                            <li><span class="list-icon" style="color: var(--orange-600);">•</span><span>Réception poussins d'un jour certifiés</span></li>
+                            <li><span class="list-icon" style="color: var(--orange-600);">•</span><span>Chauffage contrôlé (32-35°C semaine 1)</span></li>
+                            <li><span class="list-icon" style="color: var(--orange-600);">•</span><span>Aliment poussin 1er âge (23% protéines)</span></li>
+                            <li><span class="list-icon" style="color: var(--orange-600);">•</span><span>Prophylaxie : Newcastle J7, Gumboro J14</span></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="phase-section" style="background: var(--blue-50); margin-bottom: 1rem;">
+                            <h4 class="font-bold" style="color: var(--blue-800); margin-bottom: 0.5rem;">Infrastructure</h4>
+                            <p class="text-sm">Poussinière chauffée 18m²</p>
+                        </div>
+                        <div class="phase-section" style="background: var(--green-50);">
+                            <h4 class="font-bold" style="color: var(--green-800); margin-bottom: 0.5rem;">Capacité</h4>
+                            <p class="text-sm">180-200 sujets</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="phase-card">
+                <h3 class="phase-title">Croissance (22-60 jours)</h3>
+                <div class="phase-grid">
+                    <div>
+                        <div class="phase-section-title">🎯 Activités clés</div>
+                        <ul class="custom-list">
+                            <li><span class="list-icon" style="color: var(--orange-600);">•</span><span>Transition vers les groupes Nsieuh</span></li>
+                            <li><span class="list-icon" style="color: var(--orange-600);">•</span><span>Aliment croissance (19-20% protéines)</span></li>
+                            <li><span class="list-icon" style="color: var(--orange-600);">•</span><span>Vaccination rappels ou protocoles alternatives</span></li>
+                            <li><span class="list-icon" style="color: var(--orange-600);">•</span><span>Formation technique continue</span></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="phase-section" style="background: var(--blue-50); margin-bottom: 1rem;">
+                            <h4 class="font-bold" style="color: var(--blue-800); margin-bottom: 0.5rem;">Infrastructure</h4>
+                            <p class="text-sm">Poulaillers communautaires ou familiaux</p>
+                        </div>
+                        <div class="phase-section" style="background: var(--green-50);">
+                            <h4 class="font-bold" style="color: var(--green-800); margin-bottom: 0.5rem;">Capacité</h4>
+                            <p class="text-sm">Parcours herbeux</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="phase-card">
+                <h3 class="phase-title">Finition (61-120 jours)</h3>
+                <div class="phase-grid">
+                    <div>
+                        <div class="phase-section-title">🎯 Activités clés</div>
+                        <ul class="custom-list">
+                            <li><span class="list-icon" style="color: var(--orange-600);">•</span><span>Aliment finition (17-18% protéines)</span></li>
+                            <li><span class="list-icon" style="color: var(--orange-600);">•</span><span>Complémentation locale (manioc, maïs, soja, etc.)</span></li>
+                            <li><span class="list-icon" style="color: var(--orange-600);">•</span><span>Suivi sanitaire hebdomadaire</span></li>
+                            <li><span class="list-icon" style="color: var(--orange-600);">•</span><span>Préparation commercialisation</span></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="phase-section" style="background: var(--blue-50); margin-bottom: 1rem;">
+                            <h4 class="font-bold" style="color: var(--blue-800); margin-bottom: 0.5rem;">Infrastructure</h4>
+                            <p class="text-sm">Système extensif amélioré</p>
+                        </div>
+                        <div class="phase-section" style="background: var(--green-50);">
+                            <h4 class="font-bold" style="color: var(--green-800); margin-bottom: 0.5rem;">Capacité</h4>
+                            <p class="text-sm">Rotation pâturage</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card gradient-card-orange">
+                <h3 class="card-title text-center">🌾 Protocole Alimentaire Optimisé</h3>
+                <div class="grid grid-3">
+                    <div style="background: white; padding: 1.25rem; border-radius: 0.75rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                        <h4 class="font-bold" style="color: var(--orange-700); margin-bottom: 0.75rem;">Démarrage (0-21j)</h4>
+                        <ul class="text-sm">
+                            <li class="mb-1"><strong>Type :</strong> Poussin 1er âge</li>
+                            <li class="mb-1"><strong>Protéines :</strong> 23%</li>
+                            <li class="mb-1"><strong>Énergie :</strong> 3000 kcal/kg</li>
+                            <li class="mb-1"><strong>Quantité :</strong> 20g/j/sujet</li>
+                            <li class="mb-1"><strong>Coût :</strong> 350 FCFA/kg</li>
+                        </ul>
+                    </div>
+                    <div style="background: white; padding: 1.25rem; border-radius: 0.75rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                        <h4 class="font-bold" style="color: var(--green-700); margin-bottom: 0.75rem;">Croissance (22-60j)</h4>
+                        <ul class="text-sm">
+                            <li class="mb-1"><strong>Type :</strong> Croissance</li>
+                            <li class="mb-1"><strong>Protéines :</strong> 19-20%</li>
+                            <li class="mb-1"><strong>Énergie :</strong> 3100 kcal/kg</li>
+                            <li class="mb-1"><strong>Quantité :</strong> 80g/j/sujet</li>
+                            <li class="mb-1"><strong>Coût :</strong> 300 FCFA/kg</li>
+                        </ul>
+                    </div>
+                    <div style="background: white; padding: 1.25rem; border-radius: 0.75rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                        <h4 class="font-bold" style="color: var(--blue-700); margin-bottom: 0.75rem;">Finition (61-120j)</h4>
+                        <ul class="text-sm">
+                            <li class="mb-1"><strong>Type :</strong> Finition + local</li>
+                            <li class="mb-1"><strong>Protéines :</strong> 17-18%</li>
+                            <li class="mb-1"><strong>Énergie :</strong> 3200 kcal/kg</li>
+                            <li class="mb-1"><strong>Quantité :</strong> 120g/j/sujet</li>
+                            <li class="mb-1"><strong>Coût :</strong> 250 FCFA/kg</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mt-2" style="background: var(--green-100); padding: 1rem; border-radius: 0.75rem;">
+                    <p class="text-sm text-center">
+                        <strong>💡 Innovation locale :</strong> Complémentation progressive par manioc séché (énergie),
+                        drêches de brasserie ou soja (protéines), termitières (calcium), verdure (vitamines), etc. pour réduire
+                        dépendance aux aliments industriels de 30-40% en phase finition.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card" style="border-color: var(--red-600);">
+                <h3 class="card-title text-center" style="color: var(--red-800);">💉 Programme Prophylactique Renforcé</h3>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Âge</th>
+                                <th>Maladie</th>
+                                <th>Vaccin/Traitement</th>
+                                <th>Voie</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>J1-J3</td>
+                                <td>Stress transport</td>
+                                <td>Anti-stress vitaminé et compositions locales à base de miel</td>
+                                <td>Eau de boisson</td>
+                            </tr>
+                            <tr>
+                                <td>J7</td>
+                                <td>Newcastle</td>
+                                <td>Hitchner B1 ou LaSota et compositions locales</td>
+                                <td>Eau ou nasale</td>
+                            </tr>
+                            <tr>
+                                <td>J14</td>
+                                <td>Gumboro</td>
+                                <td>Vaccin Gumboro intermédiaire et compositions ancestrales locales</td>
+                                <td>Eau de boisson</td>
+                            </tr>
+                            <tr>
+                                <td>J21</td>
+                                <td>Newcastle (rappel)</td>
+                                <td>LaSota ou compositions locales</td>
+                                <td>Eau ou oculaire</td>
+                            </tr>
+                            <tr>
+                                <td>J35</td>
+                                <td>Gumboro (rappel)</td>
+                                <td>Vaccin Gumboro ou compositions locales</td>
+                                <td>Eau de boisson</td>
+                            </tr>
+                            <tr>
+                                <td>Mensuel</td>
+                                <td>Parasites internes</td>
+                                <td>Vermifuge large spectre ou compositions locales très efficaces</td>
+                                <td>Eau de boisson</td>
+                            </tr>
+                            <tr>
+                                <td>Continu</td>
+                                <td>Parasites externes</td>
+                                <td>Poudre insecticide litière ou compositions locales alternatives</td>
+                                <td>Application directe</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div style="background: #fefce8; padding: 1rem; border-radius: 0.75rem; margin-top: 1rem;">
+                    <p class="text-sm">
+                        <strong>⚠️ Note :</strong> Respect strict du calendrier vaccinal = taux de survie >90%.
+                        Quarantaine systématique nouveaux sujets. Désinfection hebdomadaire poulaillers.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Impact -->
+        <section id="impact" class="section">
+            <h2 class="section-title">🌍 Impact Multidimensionnel et Indicateurs de Suivi</h2>
+
+            <div class="grid grid-4">
+                <div class="card stat-card">
+                    <div class="stat-icon">👥</div>
+                    <div class="stat-number">2+</div>
+                    <div class="stat-label">Groupes Nsieuh</div>
+                    <div class="stat-description">Tontines de travail solidaire</div>
+                    <div class="stat-detail">Extension progressive à 6 groupes Nsieuh</div>
+                </div>
+
+                <div class="card stat-card">
+                    <div class="stat-icon">🎯</div>
+                    <div class="stat-number">1000</div>
+                    <div class="stat-label">Poussins/mois</div>
+                    <div class="stat-description">Objectif de production</div>
+                    <div class="stat-detail">Capacité technique démontrée</div>
+                </div>
+
+                <div class="card stat-card">
+<div class="stat-icon">💰</div>
+                    <div class="stat-number">3.5-4kg</div>
+                    <div class="stat-label">Poids cible</div>
+                    <div class="stat-description">Poulets commercialisés</div>
+                    <div class="stat-detail">Standard qualité premium</div>
+                </div>
+
+                <div class="card stat-card">
+                    <div class="stat-icon">❤️</div>
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Familles</div>
+                    <div class="stat-description">Directement impactées</div>
+                    <div class="stat-detail">300+ personnes bénéficiaires</div>
+                </div>
+            </div>
+
+            <div class="grid grid-3">
+                <div class="card gradient-card">
+                    <div class="stat-icon">🏥</div>
+                    <h3 class="card-title text-center" style="color: var(--green-800);">Impact Nutritionnel & Sanitaire</h3>
+                    <ul class="custom-list">
+                        <li>
+                            <span class="list-icon" style="color: var(--green-600);">→</span>
+                            <span><strong>Protéines animales</strong> : Apport 100g viande/personne/semaine (vs 20g actuellement)</span>
+                        </li>
+                        <li>
+                            <span class="list-icon" style="color: var(--green-600);">→</span>
+                            <span><strong>Fer héminique</strong> : Réduction anémie femmes enceintes de 60% à 30%</span>
+                        </li>
+                        <li>
+                            <span class="list-icon" style="color: var(--green-600);">→</span>
+                            <span><strong>Croissance infantile</strong> : Diminution retard statural de 25%</span>
+                        </li>
+                        <li>
+                            <span class="list-icon" style="color: var(--green-600);">→</span>
+                            <span><strong>Diversification</strong> : Intégration poulet dans régime hebdomadaire</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="card gradient-card-blue">
+                    <div class="stat-icon">💰</div>
+                    <h3 class="card-title text-center" style="color: var(--blue-800);">Impact Économique & Revenus</h3>
+                    <ul class="custom-list">
+                        <li>
+                            <span class="list-icon" style="color: var(--blue-600);">→</span>
+                            <span><strong>Revenus additionnels</strong> : +75,000-100,000 FCFA/famille/cycle</span>
+                        </li>
+                        <li>
+                            <span class="list-icon" style="color: var(--blue-600);">→</span>
+                            <span><strong>Emplois</strong> : 6-8 emplois directs permanents créés</span>
+                        </li>
+                        <li>
+                            <span class="list-icon" style="color: var(--blue-600);">→</span>
+                            <span><strong>Épargne Nsieuh</strong> : Constitution fonds roulement collectif</span>
+                        </li>
+                        <li>
+                            <span class="list-icon" style="color: var(--blue-600);">→</span>
+                            <span><strong>Multiplicateur</strong> : Investissement dans éducation, santé, habitat</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="card" style="background: linear-gradient(135deg, #faf5ff 0%, #fce7f3 100%); border-color: var(--purple-600);">
+                    <div class="stat-icon">🤝</div>
+                    <h3 class="card-title text-center" style="color: var(--purple-800);">Impact Social & Genre</h3>
+                    <ul class="custom-list">
+                        <li>
+                            <span class="list-icon" style="color: var(--purple-600);">→</span>
+                            <span><strong>Autonomisation féminine</strong> : 70% bénéficiaires sont des femmes</span>
+                        </li>
+                        <li>
+                            <span class="list-icon" style="color: var(--purple-600);">→</span>
+                            <span><strong>Cohésion Nsieuh</strong> : Revitalisation entraide traditionnelle</span>
+                        </li>
+                        <li>
+                            <span class="list-icon" style="color: var(--purple-600);">→</span>
+                            <span><strong>Transmission savoirs</strong> : Jeunes formés aux techniques modernes</span>
+                        </li>
+                        <li>
+                            <span class="list-icon" style="color: var(--purple-600);">→</span>
+                            <span><strong>Attractivité rurale</strong> : Frein à l'exode vers villes</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title text-center">📊 Cadre de Suivi-Évaluation Participatif</h3>
+                <div class="grid grid-2">
+                    <div>
+                        <h4 class="font-bold mb-3" style="color: var(--orange-600); display: flex; align-items: center; gap: 0.5rem;">
+                            <span style="font-size: 1.25rem;">🏆</span> Indicateurs de Résultats
+                        </h4>
+                        <ul class="custom-list">
+                            <li><span class="list-icon" style="color: var(--orange-600);">•</span><span>Taux de survie poussins (objectif : &gt;90%)</span></li>
+                            <li><span class="list-icon" style="color: var(--orange-600);">•</span><span>Poids moyen commercial atteint (3,5-4kg)</span></li>
+                            <li><span class="list-icon" style="color: var(--orange-600);">•</span><span>Nombre familles bénéficiaires (50+ Phase 2)</span></li>
+                            <li><span class="list-icon" style="color: var(--orange-600);">•</span><span>Revenus additionnels moyens/famille</span></li>
+                            <li><span class="list-icon" style="color: var(--orange-600);">•</span><span>Taux réinvestissement bénéfices (60% min)</span></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold mb-3" style="color: var(--green-600); display: flex; align-items: center; gap: 0.5rem;">
+                            <span style="font-size: 1.25rem;">📈</span> Indicateurs d'Impact
+                        </h4>
+                        <ul class="custom-list">
+                            <li><span class="list-icon" style="color: var(--green-600);">•</span><span>Consommation protéines animales (g/pers/semaine)</span></li>
+                            <li><span class="list-icon" style="color: var(--green-600);">•</span><span>Prévalence anémie femmes enceintes (%)</span></li>
+                            <li><span class="list-icon" style="color: var(--green-600);">•</span><span>Nombre Nsieuh actifs dans filière</span></li>
+                            <li><span class="list-icon" style="color: var(--green-600);">•</span><span>Niveau satisfaction bénéficiaires</span></li>
+                            <li><span class="list-icon" style="color: var(--green-600);">•</span><span>Réplication modèle autres villages</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Investissement -->
+        <section id="investissement" class="section">
+            <h2 class="section-title">💡 Plan d'Investissement Détaillé et Viabilité Financière</h2>
+
+            <div class="card" style="border: 3px solid var(--orange-600);">
+                <h3 class="card-title text-center">Budget Opérationnel Phase 2 : 500,000 FCFA</h3>
+               
+                <div class="grid grid-2 mb-4">
+                    <div>
+                        <h4 class="font-bold mb-3" style="background: var(--orange-50); padding: 0.75rem; border-radius: 0.5rem; color: var(--orange-800);">
+                            💵 Coûts Directs de Production
+                        </h4>
+                       
+                        <div class="budget-item">
+                            <div class="budget-label">
+                                <div class="budget-title">Poussins d'un jour (200 unités)</div>
+                                <div class="budget-subtitle">Souche améliorée locale @ 750 FCFA</div>
+                            </div>
+                            <span class="budget-amount">150,000</span>
+                        </div>
+
+                        <div class="budget-item">
+                            <div class="budget-label">
+                                <div class="budget-title">Aliments spécialisés</div>
+                                <div class="budget-subtitle">Démarrage + croissance + finition (3 mois)</div>
+                            </div>
+                            <span class="budget-amount">180,000</span>
+                        </div>
+
+                        <div class="budget-item">
+                            <div class="budget-label">
+                                <div class="budget-title">Prophylaxie vétérinaire</div>
+                                <div class="budget-subtitle">Vaccins + vermifuges + désinfectants</div>
+                            </div>
+                            <span class="budget-amount">40,000</span>
+                        </div>
+
+                        <div class="budget-item">
+                            <div class="budget-label">
+                                <div class="budget-title">Énergie et chauffage</div>
+                                <div class="budget-subtitle">Bois, charbon, pétrole lampant (21j)</div>
+                            </div>
+                            <span class="budget-amount">40,000</span>
+                        </div>
+
+                        <div class="budget-item">
+                            <div class="budget-label">
+                                <div class="budget-title">Litière et consommables</div>
+                                <div class="budget-subtitle">Copeaux, désinfectants, matériel sanitaire</div>
+                            </div>
+                            <span class="budget-amount">25,000</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 class="font-bold mb-3" style="background: var(--blue-50); padding: 0.75rem; border-radius: 0.5rem; color: var(--blue-800);">
+                            🛠️ Coûts Structurels et Accompagnement
+                        </h4>
+
+                        <div class="budget-item">
+                            <div class="budget-label">
+                                <div class="budget-title">Formation technique</div>
+                                <div class="budget-subtitle">3 sessions groupes Nsieuh + supports</div>
+                            </div>
+                            <span class="budget-amount">30,000</span>
+                        </div>
+
+                        <div class="budget-item">
+                            <div class="budget-label">
+                                <div class="budget-title">Suivi-accompagnement</div>
+                                <div class="budget-subtitle">Visites bimensuelles agents × 4 mois</div>
+                            </div>
+                            <span class="budget-amount">20,000</span>
+                        </div>
+
+                        <div class="budget-item">
+                            <div class="budget-label">
+                                <div class="budget-title">Transport et logistique</div>
+                                <div class="budget-subtitle">Livraison poussins + intrants + produits</div>
+                            </div>
+                            <span class="budget-amount">10,000</span>
+                        </div>
+
+                        <div class="budget-item">
+                            <div class="budget-label">
+                                <div class="budget-title">Communication et marketing</div>
+                                <div class="budget-subtitle">Étiquetage, visibilité, prospection clients</div>
+                            </div>
+                            <span class="budget-amount">5,000</span>
+                        </div>
+
+                        <div class="budget-item" style="background: var(--orange-100); border: 2px solid var(--orange-600);">
+                            <div class="budget-label">
+                                <div class="budget-title font-bold">TOTAL PHASE 2</div>
+                            </div>
+                            <span class="budget-amount" style="font-size: 1.5rem;">500,000 FCFA</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-2">
+                    <div class="card gradient-card">
+                        <h4 class="font-bold text-center mb-3" style="color: var(--green-800);">💰 Prévisions de Revenus</h4>
+                       
+                        <div style="background: white; padding: 0.75rem; border-radius: 0.5rem; margin-bottom: 0.75rem;">
+                            <div class="text-sm" style="color: var(--gray-600);">Production attendue</div>
+                            <div style="font-size: 1.25rem; font-weight: 700; color: var(--green-800);">200 poulets</div>
+                            <div class="text-xs" style="color: var(--gray-500);">(Taux survie 90% × 220 démarrés)</div>
+                        </div>
+
+                        <div style="background: white; padding: 0.75rem; border-radius: 0.5rem; margin-bottom: 0.75rem;">
+                            <div class="text-sm" style="color: var(--gray-600);">Poids moyen commercial</div>
+                            <div style="font-size: 1.25rem; font-weight: 700; color: var(--green-800);">3,8 kg</div>
+                            <div class="text-xs" style="color: var(--gray-500);">(Objectif 3,5-4kg / sujet)</div>
+                        </div>
+
+                        <div style="background: white; padding: 0.75rem; border-radius: 0.5rem; margin-bottom: 0.75rem;">
+                            <div class="text-sm" style="color: var(--gray-600);">Prix de vente moyen</div>
+                            <div style="font-size: 1.25rem; font-weight: 700; color: var(--green-800);">1,500 FCFA/kg</div>
+                            <div class="text-xs" style="color: var(--gray-500);">(Premium bio +20% vs industriel)</div>
+                        </div>
+
+                        <div style="background: var(--green-600); color: white; padding: 1rem; border-radius: 0.75rem; text-align: center;">
+                            <div class="text-sm opacity-80">Chiffre d'affaires total</div>
+                            <div style="font-size: 1.75rem; font-weight: 800;">1,140,000 FCFA</div>
+                            <div class="text-xs opacity-80">(200 × 3,8kg × 1,500 FCFA)</div>
+                        </div>
+                    </div>
+
+                    <div class="card gradient-card-blue">
+                        <h4 class="font-bold text-center mb-3" style="color: var(--blue-800);">📈 Analyse de Rentabilité</h4>
+                       
+                        <div style="background: white; padding: 0.75rem; border-radius: 0.5rem; margin-bottom: 0.75rem;">
+                            <div class="text-sm" style="color: var(--gray-600);">Investissement total</div>
+                            <div style="font-size: 1.25rem; font-weight: 700; color: var(--blue-800);">500,000 FCFA</div>
+                        </div>
+
+                        <div style="background: white; padding: 0.75rem; border-radius: 0.5rem; margin-bottom: 0.75rem;">
+                            <div class="text-sm" style="color: var(--gray-600);">Chiffre d'affaires</div>
+                            <div style="font-size: 1.25rem; font-weight: 700; color: var(--blue-800);">1,140,000 FCFA</div>
+                        </div>
+
+                        <div style="background: white; padding: 0.75rem; border-radius: 0.5rem; margin-bottom: 0.75rem;">
+                            <div class="text-sm" style="color: var(--gray-600);">Marge brute</div>
+                            <div style="font-size: 1.25rem; font-weight: 700; color: var(--green-700);">640,000 FCFA</div>
+                            <div class="text-xs" style="color: var(--gray-500);">(128% de l'investissement)</div>
+                        </div>
+
+                        <div style="background: var(--blue-600); color: white; padding: 1rem; border-radius: 0.75rem; text-align: center;">
+                            <div class="text-sm opacity-80">ROI (Retour sur Investissement)</div>
+                            <div style="font-size: 1.75rem; font-weight: 800;">228%</div>
+                            <div class="text-xs opacity-80">Sur cycle complet 4-5 mois</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" style="background: linear-gradient(135deg, #f3e8ff 0%, #fce7f3 100%); border-color: var(--purple-600);">
+                <h3 class="card-title text-center" style="color: var(--purple-800);">🔄 Répartition des Bénéfices (Modèle Solidaire)</h3>
+                <div class="grid grid-4">
+                    <div style="background: white; border-radius: 1rem; padding: 1.25rem; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                        <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">👥</div>
+                        <div style="font-size: 1.5rem; font-weight: 800; color: var(--purple-800); margin-bottom: 0.5rem;">40%</div>
+                        <div class="font-bold mb-2">Groupes Nsieuh</div>
+                        <div class="text-sm" style="color: var(--gray-600);">256,000 FCFA redistribués aux éleveurs</div>
+                    </div>
+
+                    <div style="background: white; border-radius: 1rem; padding: 1.25rem; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                        <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">🔄</div>
+                        <div style="font-size: 1.5rem; font-weight: 800; color: var(--green-800); margin-bottom: 0.5rem;">30%</div>
+                        <div class="font-bold mb-2">Fonds de Roulement</div>
+                        <div class="text-sm" style="color: var(--gray-600);">192,000 FCFA réinvestis cycle suivant</div>
+                    </div>
+
+                    <div style="background: white; border-radius: 1rem; padding: 1.25rem; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                        <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">🏗️</div>
+                        <div style="font-size: 1.5rem; font-weight: 800; color: var(--blue-800); margin-bottom: 0.5rem;">20%</div>
+                        <div class="font-bold mb-2">Infrastructures</div>
+                        <div class="text-sm" style="color: var(--gray-600);">128,000 FCFA amélioration équipements</div>
+                    </div>
+
+                    <div style="background: white; border-radius: 1rem; padding: 1.25rem; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                        <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">📚</div>
+                        <div style="font-size: 1.5rem; font-weight: 800; color: var(--amber-800); margin-bottom: 0.5rem;">10%</div>
+                        <div class="font-bold mb-2">Formation</div>
+                        <div class="text-sm" style="color: var(--gray-600);">64,000 FCFA renforcement capacités</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title text-center">🎯 Trajectoire de Croissance Triennale</h3>
+                <div class="grid grid-3">
+                    <div style="background: linear-gradient(135deg, var(--orange-50) 0%, var(--amber-100) 100%); border: 3px solid var(--orange-600); border-radius: 1rem; padding: 1.5rem;">
+                        <div class="text-center mb-3">
+                            <div style="font-size: 1.75rem; font-weight: 800; color: var(--orange-800);">Phase 1</div>
+                            <div class="text-sm" style="color: var(--gray-600);">Année 1 - Pilotage</div>
+                        </div>
+                        <ul class="text-sm">
+                            <li class="mb-2"><span style="color: var(--orange-600);">•</span> <strong>2 groupes Nsieuh</strong> (30 familles)</li>
+                            <li class="mb-2"><span style="color: var(--orange-600);">•</span> <strong>400 poulets/an</strong> (2 cycles)</li>
+                            <li class="mb-2"><span style="color: var(--orange-600);">•</span> <strong>Budget :</strong> 1,000,000 FCFA</li>
+                            <li class="mb-2"><span style="color: var(--orange-600);">•</span> <strong>CA attendu :</strong> 2,280,000 FCFA</li>
+                            <li class="mb-2"><span style="color: var(--orange-600);">•</span> Capitalisation expériences</li>
+                        </ul>
+                    </div>
+
+                    <div style="background: linear-gradient(135deg, var(--green-50) 0%, var(--green-100) 100%); border: 3px solid var(--green-600); border-radius: 1rem; padding: 1.5rem;">
+                        <div class="text-center mb-3">
+                            <div style="font-size: 1.75rem; font-weight: 800; color: var(--green-800);">Phase 2</div>
+                            <div class="text-sm" style="color: var(--gray-600);">Année 2 - Expansion</div>
+                        </div>
+                        <ul class="text-sm">
+                            <li class="mb-2"><span style="color: var(--green-600);">•</span> <strong>6 groupes Nsieuh</strong> (90 familles)</li>
+                            <li class="mb-2"><span style="color: var(--green-600);">•</span> <strong>1,200 poulets/an</strong> (3 cycles)</li>
+                            <li class="mb-2"><span style="color: var(--green-600);">•</span> <strong>Budget :</strong> 1,800,000 FCFA</li>
+                            <li class="mb-2"><span style="color: var(--green-600);">•</span> <strong>CA attendu :</strong> 6,840,000 FCFA</li>
+                            <li class="mb-2"><span style="color: var(--green-600);">•</span> Semi-autonomie financière</li>
+                        </ul>
+                    </div>
+
+                    <div style="background: linear-gradient(135deg, var(--blue-50) 0%, #bfdbfe 100%); border: 3px solid var(--blue-600); border-radius: 1rem; padding: 1.5rem;">
+                        <div class="text-center mb-3">
+                            <div style="font-size: 1.75rem; font-weight: 800; color: var(--blue-800);">Phase 3</div>
+                            <div class="text-sm" style="color: var(--gray-600);">Année 3 - Essaimage</div>
+                        </div>
+                        <ul class="text-sm">
+                            <li class="mb-2"><span style="color: var(--blue-600);">•</span> <strong>15 groupes Nsieuh</strong> (225 familles)</li>
+                            <li class="mb-2"><span style="color: var(--blue-600);">•</span> <strong>3,000 poulets/an</strong> (4 cycles)</li>
+                            <li class="mb-2"><span style="color: var(--blue-600);">•</span> <strong>Autofinancement</strong> complet</li>
+                            <li class="mb-2"><span style="color: var(--blue-600);">•</span> <strong>CA attendu :</strong> 17,100,000 FCFA</li>
+                            <li class="mb-2"><span style="color: var(--blue-600);">•</span> Réplication autres paysages</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Gouvernance -->
+        <section id="gouvernance" class="section">
+            <h2 class="section-title">⚖️ Gouvernance Participative et Gestion Transparente</h2>
+
+            <div class="card">
+                <h3 class="card-title text-center">🏛️ Structure Organisationnelle COSODO</h3>
+                <div class="grid grid-3">
+                    <div style="background: linear-gradient(135deg, var(--purple-50) 0%, #fce7f3 100%); border: 2px solid var(--purple-600); border-radius: 1rem; padding: 1.5rem;">
+                        <div class="stat-icon">👑</div>
+                        <h4 class="font-bold text-center mb-3" style="color: var(--purple-800);">Niveau Stratégique</h4>
+                        <ul class="text-sm">
+                            <li class="mb-2"><strong>Assemblée Générale :</strong> Tous membres COSODO</li>
+                            <li class="mb-2"><strong>Conseil d'Administration :</strong> 9 membres élus</li>
+                            <li class="mb-2"><strong>Bureau Exécutif :</strong> Président, Secrétaire, Trésorier</li>
+                            <li class="mb-2"><strong>Rôle :</strong> Orientations, validation budgets, arbitrages</li>
+                        </ul>
+                    </div>
+
+                    <div style="background: linear-gradient(135deg, var(--blue-50) 0%, #bfdbfe 100%); border: 2px solid var(--blue-600); border-radius: 1rem; padding: 1.5rem;">
+                        <div class="stat-icon">⚙️</div>
+                        <h4 class="font-bold text-center mb-3" style="color: var(--blue-800);">Niveau Opérationnel</h4>
+                        <ul class="text-sm">
+                            <li class="mb-2"><strong>Coordinatrice AVI-COSOSO :</strong> Gestion quotidienne</li>
+                            <li class="mb-2"><strong>Agents d'élevage :</strong> Accompagnement technique (2)</li>
+                            <li class="mb-2"><strong>Gestionnaire stocks :</strong> Intrants et produits</li>
+                            <li class="mb-2"><strong>Rôle :</strong> Mise en œuvre, suivi terrain, reporting</li>
+                        </ul>
+                    </div>
+
+                    <div style="background: linear-gradient(135deg, var(--green-50) 0%, var(--green-100) 100%); border: 2px solid var(--green-600); border-radius: 1rem; padding: 1.5rem;">
+                        <div class="stat-icon">🤝</div>
+                        <h4 class="font-bold text-center mb-3" style="color: var(--green-800);">Niveau Communautaire</h4>
+                        <ul class="text-sm">
+                            <li class="mb-2"><strong>Responsables Nsieuh :</strong> Chefs de groupes</li>
+                            <li class="mb-2"><strong>Éleveurs bénéficiaires :</strong> Membres actifs</li>
+                            <li class="mb-2"><strong>Comité de suivi villageois :</strong> Sages et notables</li>
+                            <li class="mb-2"><strong>Rôle :</strong> Appropriation, contrôle social, pérennisation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-2">
+                <div class="card gradient-card-orange">
+                    <h4 class="font-bold mb-3" style="color: var(--amber-800); display: flex; align-items: center; gap: 0.5rem;">
+                        <span style="font-size: 1.5rem;">🛡️</span> Mécanismes de Transparence
+                    </h4>
+                    <ul class="custom-list">
+                        <li>
+                            <span class="list-icon" style="color: var(--amber-600);">✓</span>
+                            <span><strong>Comptabilité ouverte :</strong> Registres accessibles aux membres</span>
+                        </li>
+                        <li>
+                            <span class="list-icon" style="color: var(--amber-600);">✓</span>
+                            <span><strong>Rapports trimestriels :</strong> Présentation résultats en AG</span>
+                        </li>
+                        <li>
+                            <span class="list-icon" style="color: var(--amber-600);">✓</span>
+                            <span><strong>Audit annuel externe :</strong> Vérification finances et impacts</span>
+                        </li>
+                        <li>
+                            <span class="list-icon" style="color: var(--amber-600);">✓</span>
+                            <span><strong>Groupe WhatsApp :</strong> Communication temps réel avec contributeurs</span>
+                        </li>
+                        <li>
+                            <span class="list-icon" style="color: var(--amber-600);">✓</span>
+                            <span><strong>Visites terrain :</strong> Invitation investisseurs et partenaires</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="card gradient-card">
+                    <h4 class="font-bold mb-3" style="color: var(--green-800); display: flex; align-items: center; gap: 0.5rem;">
+                        <span style="font-size: 1.5rem;">👥</span> Participation des Bénéficiaires
+                    </h4>
+                    <ul class="custom-list">
+                        <li>
+                            <span class="list-icon" style="color: var(--green-600);">✓</span>
+                            <span><strong>Critères d'inclusion :</strong> Membre Nsieuh actif, motivation, engagement temps</span>
+                        </li>
+                        <li>
+                            <span class="list-icon" style="color: var(--green-600);">✓</span>
+                            <span><strong>Charte éleveur :</strong> Droits et devoirs formalisés et signés</span>
+                        </li>
+                        <li>
+                            <span class="list-icon" style="color: var(--green-600);">✓</span>
+                            <span><strong>Comité pilotage :</strong> 2 représentants éleveurs au CA</span>
+                        </li>
+                        <li>
+                            <span class="list-icon" style="color: var(--green-600);">✓</span>
+                            <span><strong>Évaluation participative :</strong> Bénéficiaires notent qualité services</span>
+                        </li>
+                        <li>
+                            <span class="list-icon" style="color: var(--green-600);">✓</span>
+                            <span><strong>Décisions collectives :</strong> Prix vente, répartition bénéfices, expansion</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card" style="border-color: var(--blue-600);">
+                <h3 class="card-title text-center" style="color: var(--blue-800);">📋 Gestion des Risques et Mesures d'Atténuation</h3>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Risque Identifié</th>
+                                <th>Probabilité</th>
+                                <th>Impact</th>
+                                <th>Mesures d'Atténuation</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Épizootie aviaire</strong></td>
+                                <td><span style="background: #fef08a; padding: 0.25rem 0.5rem; border-radius: 0.25rem; font-size: 0.75rem; font-weight: 600;">Moyen</span></td>
+                                <td><span style="background: #fecaca; padding: 0.25rem 0.5rem; border-radius: 0.25rem; font-size: 0.75rem; font-weight: 600;">Élevé</span></td>
+                                <td>Prophylaxie stricte, biosécurité, assurance aviaire, diversification races</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Mévente produits</strong></td>
+                                <td><span style="background: #bbf7d0; padding: 0.25rem 0.5rem; border-radius: 0.25rem; font-size: 0.75rem; font-weight: 600;">Faible</span></td>
+                                <td><span style="background: #fef08a; padding: 0.25rem 0.5rem; border-radius: 0.25rem; font-size: 0.75rem; font-weight: 600;">Moyen</span></td>
+                                <td>Contrats préalables, diversification circuits (local+urbain), communication marketing</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Déficit financement</strong></td>
+                                <td><span style="background: #fef08a; padding: 0.25rem 0.5rem; border-radius: 0.25rem; font-size: 0.75rem; font-weight: 600;">Moyen</span></td>
+                                <td><span style="background: #fecaca; padding: 0.25rem 0.5rem; border-radius: 0.25rem; font-size: 0.75rem; font-weight: 600;">Élevé</span></td>
+                                <td>Diversification sources (diaspora, bailleurs, autofinancement), fonds roulement</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Désengagement Nsieuh</strong></td>
+                                <td><span style="background: #bbf7d0; padding: 0.25rem 0.5rem; border-radius: 0.25rem; font-size: 0.75rem; font-weight: 600;">Faible</span></td>
+                                <td><span style="background: #fef08a; padding: 0.25rem 0.5rem; border-radius: 0.25rem; font-size: 0.75rem; font-weight: 600;">Moyen</span></td>
+                                <td>Accompagnement rapproché, résultats visibles rapides, valorisation leaders</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Détournement fonds</strong></td>
+                                <td><span style="background: #bbf7d0; padding: 0.25rem 0.5rem; border-radius: 0.25rem; font-size: 0.75rem; font-weight: 600;">Faible</span></td>
+                                <td><span style="background: #fecaca; padding: 0.25rem 0.5rem; border-radius: 0.25rem; font-size: 0.75rem; font-weight: 600;">Élevé</span></td>
+                                <td>Double signature, audit externe, comité surveillance, sanctions prévues</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Durabilité -->
+        <section id="durabilite" class="section">
+            <h2 class="section-title">♻️ Durabilité Multidimensionnelle et Stratégie de Pérennisation</h2>
+
+            <div class="grid grid-4">
+                <div class="card stat-card">
+                    <div style="width: 4rem; height: 4rem; background: linear-gradient(135deg, var(--orange-100) 0%, var(--amber-100) 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                        <span style="font-size: 2rem;">💰</span>
+                    </div>
+                    <h4 class="font-bold mb-3" style="color: var(--amber-800);">Économique</h4>
+                    <ul class="text-sm" style="text-align: left;">
+                        <li class="mb-2"><span style="color: var(--orange-600);">•</span> Fonds de roulement auto-généré</li>
+                        <li class="mb-2"><span style="color: var(--orange-600);">•</span> Diversification revenus familiaux</li>
+                        <li class="mb-2"><span style="color: var(--orange-600);">•</span> Circuit court de commercialisation</li>
+                        <li class="mb-2"><span style="color: var(--orange-600);">•</span> Prix équitables garantis</li>
+                    </ul>
+                </div>
+
+                <div class="card stat-card">
+                    <div style="width: 4rem; height: 4rem; background: linear-gradient(135deg, var(--green-100) 0%, var(--green-200) 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                        <span style="font-size: 2rem;">👥</span>
+                    </div>
+                    <h4 class="font-bold mb-3" style="color: var(--green-800);">Social</h4>
+                    <ul class="text-sm" style="text-align: left;">
+                        <li class="mb-2"><span style="color: var(--green-600);">•</span> Renforcement cohésion Nsieuh</li>
+                        <li class="mb-2"><span style="color: var(--green-600);">•</span> Autonomisation des femmes</li>
+                        <li class="mb-2"><span style="color: var(--green-600);">•</span> Sécurité alimentaire familiale</li>
+                        <li class="mb-2"><span style="color: var(--green-600);">•</span> Transmission savoirs intergénérationnels</li>
+                    </ul>
+                </div>
+
+                <div class="card stat-card">
+                    <div style="width: 4rem; height: 4rem; background: linear-gradient(135deg, #dcfce7 0%, #86efac 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                        <span style="font-size: 2rem;">🍃</span>
+                    </div>
+                    <h4 class="font-bold mb-3" style="color: var(--green-800);">Environnemental</h4>
+                    <ul class="text-sm" style="text-align: left;">
+                        <li class="mb-2"><span style="color: var(--green-600);">•</span> Aviculture biologique certifiable</li>
+                        <li class="mb-2"><span style="color: var(--green-600);">•</span> Valorisation déchets organiques</li>
+                        <li class="mb-2"><span style="color: var(--green-600);">•</span> Préservation biodiversité locale</li>
+                        <li class="mb-2"><span style="color: var(--green-600);">•</span> Agroforesterie poulailler</li>
+                    </ul>
+                </div>
+
+                <div class="card stat-card">
+                    <div style="width: 4rem; height: 4rem; background: linear-gradient(135deg, var(--blue-100) 0%, #93c5fd 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                        <span style="font-size: 2rem;">🛡️</span>
+                    </div>
+                    <h4 class="font-bold mb-3" style="color: var(--blue-800);">Institutionnel</h4>
+                    <ul class="text-sm" style="text-align: left;">
+                        <li class="mb-2"><span style="color: var(--blue-600);">•</span> Gouvernance participative COSODO</li>
+                        <li class="mb-2"><span style="color: var(--blue-600);">•</span> Partenariats stratégiques</li>
+                        <li class="mb-2"><span style="color: var(--blue-600);">•</span> Documentation bonnes pratiques</li>
+                        <li class="mb-2"><span style="color: var(--blue-600);">•</span> Plaidoyer politique sectorielle</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card" style="background: linear-gradient(135deg, var(--green-50) 0%, #d1fae5 100%); border: 3px solid var(--green-600);">
+                <h3 class="card-title text-center" style="color: var(--green-800); display: flex; align-items: center; justify-content: center; gap: 0.75rem;">
+                    <span style="font-size: 2rem;">🍃</span> Approche Agroécologique Intégrée
+                </h3>
+                <div class="grid grid-3">
+                    <div style="background: white; border-radius: 1rem; padding: 1.25rem;">
+                        <h4 class="font-bold mb-3" style="color: var(--green-800);">🌱 Alimentation biologique</h4>
+                        <ul class="text-sm">
+                            <li class="mb-2">• Cultures fourragères locales (manioc, maïs, moringa)</li>
+                            <li class="mb-2">• Zéro antibiotiques de croissance</li>
+                            <li class="mb-2">• Compléments naturels (termitières, vers)</li>
+                            <li class="mb-2">• Certification bio progressive</li>
+                        </ul>
+                    </div>
+
+                    <div style="background: white; border-radius: 1rem; padding: 1.25rem;">
+                        <h4 class="font-bold mb-3" style="color: var(--green-800);">🔄 Économie circulaire</h4>
+                        <ul class="text-sm">
+                            <li class="mb-2">• Fumier → compost → cultures maraîchères</li>
+                            <li class="mb-2">• Déchets cuisine → alimentation volailles</li>
+                            <li class="mb-2">• Litière usagée → amendement sols</li>
+                            <li class="mb-2">• Plumes → artisanat local</li>
+                        </ul>
+                    </div>
+
+                    <div style="background: white; border-radius: 1rem; padding: 1.25rem;">
+                        <h4 class="font-bold mb-3" style="color: var(--green-800);">🌳 Agroforesterie</h4>
+                        <ul class="text-sm">
+                            <li class="mb-2">• Parcours ombragés (arbres fruitiers)</li>
+                            <li class="mb-2">• Haies vives clôtures (protection naturelle)</li>
+                            <li class="mb-2">• Biodiversité fonctionnelle (insectes utiles)</li>
+                            <li class="mb-2">• Séquestration carbone</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" style="border-color: var(--blue-600);">
+                <h3 class="card-title text-center" style="color: var(--blue-800);">🎓 Stratégie de Renforcement des Capacités</h3>
+                <div class="grid grid-2">
+                    <div>
+                        <h4 class="font-bold mb-3" style="color: var(--blue-800); display: flex; align-items: center; gap: 0.5rem;">
+                            <span style="font-size: 1.25rem;">📚</span> Formation Continue
+                        </h4>
+                        <ul class="custom-list">
+                            <li style="background: var(--blue-50);">
+                                <span class="list-icon" style="color: var(--blue-600);">•</span>
+                                <span><strong>Modules techniques :</strong> Prophylaxie, alimentation, habitat, biosécurité (trimestriels)</span>
+                            </li>
+                            <li style="background: var(--blue-50);">
+                                <span class="list-icon" style="color: var(--blue-600);">•</span>
+                                <span><strong>Gestion d'entreprise :</strong> Comptabilité simplifiée, marketing, négociation commerciale (semestriels)</span>
+                            </li>
+                            <li style="background: var(--blue-50);">
+                                <span class="list-icon" style="color: var(--blue-600);">•</span>
+                                <span><strong>Échanges pairs :</strong> Visites croisées, capitalisation bonnes pratiques, mentorat</span>
+                            </li>
+                            <li style="background: var(--blue-50);">
+                                <span class="list-icon" style="color: var(--blue-600);">•</span>
+                                <span><strong>Certifications :</strong> Agriculture biologique, traçabilité, bien-être animal</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="font-bold mb-3" style="color: var(--green-800); display: flex; align-items: center; gap: 0.5rem;">
+                            <span style="font-size: 1.25rem;">🌐</span> Ferme-École et Essaimage
+                        </h4>
+                        <ul class="custom-list">
+                            <li style="background: var(--green-50);">
+                                <span class="list-icon" style="color: var(--green-600);">•</span>
+                                <span><strong>Centre de démonstration :</strong> Poussinière COSODO ouverte aux visiteurs et stagiaires</span>
+                            </li>
+                            <li style="background: var(--green-50);">
+                                <span class="list-icon" style="color: var(--green-600);">•</span>
+                                <span><strong>Documentation :</strong> Fiches techniques, vidéos tutoriels, guide de l'éleveur</span>
+                            </li>
+                            <li style="background: var(--green-50);">
+                                <span class="list-icon" style="color: var(--green-600);">•</span>
+                                <span><strong>Réseautage :</strong> Échanges avec autres initiatives avicoles régionales</span>
+                            </li>
+                            <li style="background: var(--green-50);">
+                                <span class="list-icon" style="color: var(--green-600);">•</span>
+                                <span><strong>Réplication :</strong> Accompagnement nouveaux villages demandeurs (5+ en portefeuille)</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" style="background: linear-gradient(135deg, #f3e8ff 0%, #fce7f3 100%); border-color: var(--purple-600);">
+                <h3 class="card-title text-center" style="color: var(--purple-800);">🌐 Partenariats Stratégiques et Plaidoyer</h3>
+                <div class="grid grid-3">
+                    <div style="background: white; border-radius: 1rem; padding: 1.25rem;">
+                        <h4 class="font-bold mb-3" style="color: var(--purple-800);">🤝 Partenaires Techniques</h4>
+                        <ul class="text-sm">
+                            <li class="mb-2">• MINEPIA (Ministère Élevage)</li>
+                            <li class="mb-2">• Vétérinaires Sans Frontières</li>
+                            <li class="mb-2">• Centres de recherche (IRAD)</li>
+                            <li class="mb-2">• Universités agricoles</li>
+                        </ul>
+                    </div>
+
+                    <div style="background: white; border-radius: 1rem; padding: 1.25rem;">
+                        <h4 class="font-bold mb-3" style="color: var(--purple-800);">💼 Partenaires Financiers</h4>
+                        <ul class="text-sm">
+                            <li class="mb-2">• Diaspora Ndoubock organisée</li>
+                            <li class="mb-2">• ONG développement rural</li>
+                            <li class="mb-2">• Fondations philanthropiques</li>
+                            <li class="mb-2">• Institutions de microfinance</li>
+                        </ul>
+                    </div>
+
+                    <div style="background: white; border-radius: 1rem; padding: 1.25rem;">
+                        <h4 class="font-bold mb-3" style="color: var(--purple-800);">📢 Plaidoyer Politique</h4>
+                        <ul class="text-sm">
+                            <li class="mb-2">• Subventions intrants avicoles</li>
+                            <li class="mb-2">• Label "Poulet Paysage Ndoubock"</li>
+                            <li class="mb-2">• Fiscalité préférentielle coopératives</li>
+                            <li class="mb-2">• Marchés publics (cantines, hôpitaux)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Action -->
+        <section id="action" class="section">
+            <h2 class="section-title">🚀 Passez à l'Action : Soutenez AVI-COSOSO !</h2>
+            <p class="text-center mb-4" style="font-size: 1.25rem; color: var(--gray-700); max-width: 800px; margin-left: auto; margin-right: auto;">
+                Votre contribution peut transformer durablement la vie de dizaines de familles rurales du Paysage Ndoubock
+            </p>
+
+            <div class="grid grid-3">
+                <div class="card" style="background: linear-gradient(135deg, var(--orange-100) 0%, var(--amber-100) 100%); border: 3px solid var(--orange-600);">
+                    <div class="stat-icon">💰</div>
+                    <h3 class="card-title text-center" style="color: var(--orange-800);">Contribuer Financièrement</h3>
+                   
+                    <div style="background: white; border-radius: 0.75rem; padding: 1rem; margin-bottom: 1rem;">
+                        <div class="font-bold mb-2">🌱 Parrainage Poussin</div>
+                        <div style="font-size: 1.5rem; font-weight: 800; color: var(--orange-700); margin-bottom: 0.25rem;">2,500 FCFA</div>
+                        <div class="text-sm" style="color: var(--gray-600);">Financement 1 poussin → 1 poulet commercial</div>
+                    </div>
+
+                    <div style="background: white; border-radius: 0.75rem; padding: 1rem; margin-bottom: 1rem;">
+                        <div class="font-bold mb-2">👥 Parrainage Nsieuh</div>
+                        <div style="font-size: 1.5rem; font-weight: 800; color: var(--orange-700); margin-bottom: 0.25rem;">50,000 FCFA</div>
+                        <div class="text-sm" style="color: var(--gray-600);">Soutien complet 1 groupe (10-15 familles)</div>
+                    </div>
+
+                    <div style="background: white; border-radius: 0.75rem; padding: 1rem; margin-bottom: 1.5rem;">
+                        <div class="font-bold mb-2">🏆 Partenaire Stratégique</div>
+                        <div style="font-size: 1.5rem; font-weight: 800; color: var(--orange-700); margin-bottom: 0.25rem;">500,000+ FCFA</div>
+                        <div class="text-sm" style="color: var(--gray-600);">Financement cycle complet avec reconnaissance</div>
+                    </div>
+
+                    <button class="cta-button cta-primary">
+                        💰 Je contribue maintenant
+                    </button>
+                </div>
+
+                <div class="card" style="background: linear-gradient(135deg, var(--green-100) 0%, #d1fae5 100%); border: 3px solid var(--green-600);">
+                    <div class="stat-icon">🛠️</div>
+                    <h3 class="card-title text-center" style="color: var(--green-800);">Apporter Votre Expertise</h3>
+                   
+                    <div style="background: white; border-radius: 0.75rem; padding: 1rem; margin-bottom: 0.75rem;">
+                        <div class="font-bold mb-1">🔬 Vétérinaire/Zootechnicien</div>
+                        <div class="text-sm" style="color: var(--gray-600);">Conseil technique, protocoles sanitaires</div>
+                    </div>
+
+                    <div style="background: white; border-radius: 0.75rem; padding: 1rem; margin-bottom: 0.75rem;">
+                        <div class="font-bold mb-1">💼 Gestionnaire/Comptable</div>
+                        <div class="text-sm" style="color: var(--gray-600);">Gestion financière, audit, formation</div>
+                    </div>
+
+                    <div style="background: white; border-radius: 0.75rem; padding: 1rem; margin-bottom: 0.75rem;">
+                        <div class="font-bold mb-1">📱 Marketing/Communication</div>
+                        <div class="text-sm" style="color: var(--gray-600);">Stratégie commerciale, visibilité digitale</div>
+                    </div>
+
+                    <div style="background: white; border-radius: 0.75rem; padding: 1rem; margin-bottom: 1.5rem;">
+                        <div class="font-bold mb-1">🌾 Agronome</div>
+                        <div class="text-sm" style="color: var(--gray-600);">Cultures fourragères, agroécologie</div>
+                    </div>
+
+                    <button class="cta-button cta-secondary">
+                        🛠️ Je propose mon expertise
+                    </button>
+                </div>
+
+                <div class="card" style="background: linear-gradient(135deg, var(--blue-100) 0%, #bfdbfe 100%); border: 3px solid var(--blue-600);">
+                    <div class="stat-icon">📢</div>
+                    <h3 class="card-title text-center" style="color: var(--blue-800);">Diffuser le Projet</h3>
+                   
+                    <div style="background: white; border-radius: 0.75rem; padding: 1rem; margin-bottom: 0.75rem;">
+                        <div class="font-bold mb-1">🌐 Réseaux sociaux</div>
+                        <div class="text-sm" style="color: var(--gray-600);">Partager auprès de votre communauté</div>
+                    </div>
+
+                    <div style="background: white; border-radius: 0.75rem; padding: 1rem; margin-bottom: 0.75rem;">
+                        <div class="font-bold mb-1">🎤 Ambassadeur</div>
+                        <div class="text-sm" style="color: var(--gray-600);">Présenter dans votre réseau professionnel</div>
+                    </div>
+
+                    <div style="background: white; border-radius: 0.75rem; padding: 1rem; margin-bottom: 0.75rem;">
+                        <div class="font-bold mb-1">📰 Médias</div>
+                        <div class="text-sm" style="color: var(--gray-600);">Faire connaître l'initiative aux journalistes</div>
+                    </div>
+
+                    <div style="background: white; border-radius: 0.75rem; padding: 1rem; margin-bottom: 1.5rem;">
+                        <div class="font-bold mb-1">🤝 Mise en relation</div>
+                        <div class="text-sm" style="color: var(--gray-600);">Connecter avec des partenaires potentiels</div>
+                    </div>
+
+                    <button class="cta-button cta-tertiary">
+                        📢 Je deviens ambassadeur
+                    </button>
+                </div>
+            </div>
+
+            <div class="card" style="border: 3px solid var(--orange-600);">
+                <h3 class="card-title text-center">📞 Contactez-nous</h3>
+                <div class="grid grid-2">
+                    <div>
+                        <div class="contact-item" style="background: var(--orange-50);">
+                            <div class="contact-icon" style="background: var(--orange-200);">
+                                <span>👤</span>
+                            </div>
+                            <div class="contact-info">
+                                <div class="contact-title">Coordinatrice AVI-COSODO</div>
+                                <div class="contact-detail">Mme Tamko Veronica</div>
+                            </div>
+                        </div>
+
+                        <div class="contact-item" style="background: var(--blue-50);">
+                            <div class="contact-icon" style="background: var(--blue-200);">
+                                <span>📱</span>
+                            </div>
+                            <div class="contact-info">
+                                <div class="contact-title">Téléphone/WhatsApp</div>
+                                <div class="contact-detail">+237 683 155 197</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="contact-item" style="background: var(--green-50);">
+                            <div class="contact-icon" style="background: var(--green-200);">
+                                <span>📧</span>
+                            </div>
+                            <div class="contact-info">
+                                <div class="contact-title">Email</div>
+                                <div class="contact-detail">eco2africa@gmail.com</div>
+                            </div>
+                        </div>
+
+                        <div class="contact-item" style="background: #f3e8ff;">
+                            <div class="contact-icon" style="background: #e9d5ff;">
+                                <span>📍</span>
+                            </div>
+                            <div class="contact-info">
+                                <div class="contact-title">Localisation</div>
+                                <div class="contact-detail">Paysage Ndoubock, Batchingou, Région de l'Ouest Cameroun</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card gradient-card-orange">
+                <h3 class="card-title text-center">❓ Questions Fréquentes (FAQ)</h3>
+               
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(0)">
+                        <span>Pourquoi l'aviculture biologique communautaire ?</span>
+                        <span class="faq-icon" id="faq-icon-0">▼</span>
+                    </button>
+                    <div class="faq-answer" id="faq-answer-0">
+                        L'approche biologique s'inscrit dans les pratiques ancestrales locales tout en intégrant des innovations techniques. Elle garantit une viande de qualité supérieure, respecte l'environnement et répond aux attentes des consommateurs urbains camerounais.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(1)">
+                        <span>Comment fonctionne le système Nsieuh ?</span>
+                        <span class="faq-icon" id="faq-icon-1">▼</span>
+                    </button>
+                    <div class="faq-answer" id="faq-answer-1">
+                        Les Nsieuh sont des tontines de travail traditionnelles où les membres se soutiennent mutuellement. Pour AVI-COSOSO, chaque groupe reçoit des poussins, bénéficie de formations collectives et partage les ressources (travail, surveillance, commercialisation).
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(2)">
+                        <span>Quelle est la rentabilité réelle du projet ?</span>
+                        <span class="faq-icon" id="faq-icon-2">▼</span>
+                    </button>
+                    <div class="faq-answer" id="faq-answer-2">
+                        Sur un cycle de 4-5 mois : investissement 500,000 FCFA, chiffre d'affaires attendu 1,200,000 FCFA (200 poulets × 4kg × 1,500 FCFA/kg), soit un ROI de 240%. Les coûts alimentaires sont partiellement compensés par la production locale.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(3)">
+                        <span>Comment garantir la durabilité du modèle ?</span>
+                        <span class="faq-icon" id="faq-icon-3">▼</span>
+                    </button>
+                    <div class="faq-answer" id="faq-answer-3">
+                        Trois piliers : autonomie alimentaire progressive (cultures fourragères locales), fonds de roulement communautaire réinvesti, et transfert de compétences via la ferme-école. Objectif : autonomie financière à partir de la Phase 3.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(4)">
+                        <span>Quel accompagnement pour les bénéficiaires ?</span>
+                        <span class="faq-icon" id="faq-icon-4">▼</span>
+                    </button>
+                    <div class="faq-answer" id="faq-answer-4">
+                        Formation initiale en ferme-école pratique(3 jours), visites techniques bimensuelles, assistance vétérinaire, appui à la commercialisation via COSODO Hub, et capitalisation des bonnes pratiques pour l'essaimage.
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" style="background: linear-gradient(135deg, var(--green-600) 0%, #059669 100%); color: white; text-align: center; padding: 3rem 2rem;">
+                <div style="font-size: 4rem; margin-bottom: 1.5rem;">🌟</div>
+                <h3 style="font-size: 2rem; font-weight: 800; margin-bottom: 1.5rem;">
+                    Ensemble, Transformons les Vies !
+                </h3>
+                <p style="font-size: 1.25rem; margin-bottom: 2rem; opacity: 0.95; max-width: 800px; margin-left: auto; margin-right: auto;">
+                    Chaque contribution, quelle que soit sa forme, rapproche les communautés rurales du Ndoubock
+                    de l'autosuffisance alimentaire et de la prospérité durable.
+                </p>
+                <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
+                    <button class="cta-button" style="background: white; color: var(--green-700); width: auto;">
+                        💰 Faire un don
+                    </button>
+                    <button class="cta-button" style="background: var(--orange-500); color: white; width: auto;">
+                        📥 Télécharger le dossier complet
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>AVI-COSOSO</h4>
+                    <p class="text-sm opacity-90">
+                        Initiative avicole solidaire portée par COSODO pour le développement rural du Paysage Ndoubock
+                    </p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Liens Utiles</h4>
+                    <ul>
+                        <li>• Qui sommes-nous</li>
+                        <li>• Documentation technique</li>
+                        <li>• Actualités du projet</li>
+                        <li>• Galerie photos</li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Partenaires</h4>
+                    <ul>
+                        <li>• Diaspora Ndoubock</li>
+                        <li>• MINEPIA Cameroun</li>
+                        <li>• ONG partenaires</li>
+                        <li>• Institutions locales</li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Transparence</h4>
+                    <ul>
+                        <li>• Rapports d'activités</li>
+                        <li>• États financiers</li>
+                        <li>• Audits externes</li>
+                        <li>• Témoignages bénéficiaires</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2025 AVI-COSOSO / COSODO - Tous droits réservés</p>
+                <p style="margin-top: 0.5rem;">Conçu avec ❤️ pour les communautés rurales du paysage Ndoubock et du Cameroun</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Navigation entre sections
+        function showSection(sectionId) {
+            // Cacher toutes les sections
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+
+            // Afficher la section sélectionnée
+            const targetSection = document.getElementById(sectionId);
+            if (targetSection) {
+                targetSection.classList.add('active');
+            }
+
+            // Mettre à jour les boutons de navigation
+            const buttons = document.querySelectorAll('.nav-btn');
+            buttons.forEach(button => {
+                button.classList.remove('active');
+            });
+
+            // Activer le bouton correspondant
+            event.target.classList.add('active');
+
+            // Scroll vers le haut
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Toggle FAQ
+        function toggleFaq(index) {
+            const faqItem = document.querySelectorAll('.faq-item')[index];
+            const answer = document.getElementById(`faq-answer-${index}`);
+            const icon = document.getElementById(`faq-icon-${index}`);
+
+            if (faqItem.classList.contains('open')) {
+                faqItem.classList.remove('open');
+                answer.style.maxHeight = '0';
+                answer.style.padding = '0 1.25rem';
+                icon.textContent = '▼';
+            } else {
+                // Fermer tous les autres FAQ
+                document.querySelectorAll('.faq-item').forEach((item, i) => {
+                    item.classList.remove('open');
+                    document.getElementById(`faq-answer-${i}`).style.maxHeight = '0';
+                    document.getElementById(`faq-answer-${i}`).style.padding = '0 1.25rem';
+                    document.getElementById(`faq-icon-${i}`).textContent = '▼';
+                });
+
+                // Ouvrir le FAQ sélectionné
+                faqItem.classList.add('open');
+                answer.style.maxHeight = answer.scrollHeight + 'px';
+                answer.style.padding = '0 1.25rem 1.25rem 1.25rem';
+                icon.textContent = '▲';
+            }
+        }
+
+        // Animation au scroll
+        function revealOnScroll() {
+            const cards = document.querySelectorAll('.card, .phase-card');
+           
+            cards.forEach(card => {
+                const cardTop = card.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+               
+                if (cardTop < windowHeight * 0.85) {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }
+            });
+        }
+
+        // Initialisation
+        document.addEventListener('DOMContentLoaded', function() {
+            // Préparer les cartes pour l'animation
+            const cards = document.querySelectorAll('.card, .phase-card');
+            cards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            });
+
+            // Lancer l'animation initiale
+            setTimeout(revealOnScroll, 100);
+
+            // Écouter le scroll
+            window.addEventListener('scroll', revealOnScroll);
+
+            // Animation de la barre de progression dans le header
+            setTimeout(() => {
+                const progressBar = document.querySelector('.progress-bar');
+                if (progressBar) {
+                    progressBar.style.width = '62.5%';
+                }
+            }, 500);
+        });
+
+        // Fonction d'impression optimisée
+        function printDocument() {
+            window.print();
+        }
+
+        // Fonction pour télécharger en PDF (nécessite une bibliothèque externe en production)
+        function downloadPDF() {
+            alert('Fonction de téléchargement PDF : À implémenter avec une bibliothèque comme jsPDF ou html2pdf.js');
+        }
+
+        // Gestion du mode sombre (optionnel)
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+            localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
+        }
+
+        // Smooth scroll pour les ancres
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Fonction de partage sur les réseaux sociaux
+        function shareOnSocial(platform) {
+            const url = encodeURIComponent(window.location.href);
+            const title = encodeURIComponent('AVI-COSOSO - Initiative Avicole Solidaire du Paysage Ndoubock');
+           
+            let shareUrl = '';
+           
+            switch(platform) {
+                case 'facebook':
+                    shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+                    break;
+                case 'twitter':
+                    shareUrl = `https://twitter.com/intent/tweet?url=${url}&text=${title}`;
+                    break;
+                case 'linkedin':
+                    shareUrl = `https://www.linkedin.com/shareArticle?mini=true&url=${url}&title=${title}`;
+                    break;
+                case 'whatsapp':
+                    shareUrl = `https://wa.me/?text=${title}%20${url}`;
+                    break;
+            }
+           
+            if (shareUrl) {
+                window.open(shareUrl, '_blank', 'width=600,height=400');
+            }
+        }
+
+        // Fonction pour copier le lien
+        function copyLink() {
+            navigator.clipboard.writeText(window.location.href).then(() => {
+                alert('Lien copié dans le presse-papier !');
+            });
+        }
+
+        // Validation du formulaire de contact (si ajouté)
+        function validateContactForm(event) {
+            event.preventDefault();
+           
+            const name = document.getElementById('contact-name')?.value;
+            const email = document.getElementById('contact-email')?.value;
+            const message = document.getElementById('contact-message')?.value;
+           
+            if (!name || !email || !message) {
+                alert('Veuillez remplir tous les champs');
+                return false;
+            }
+           
+            // Validation email
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert('Veuillez entrer une adresse email valide');
+                return false;
+            }
+           
+            alert('Message envoyé avec succès ! Nous vous contacterons bientôt.');
+            return true;
+        }
+
+        // Gestion responsive de la navigation
+        function handleResponsiveNav() {
+            const nav = document.querySelector('.nav');
+            const navButtons = document.querySelectorAll('.nav-btn');
+           
+            if (window.innerWidth < 768) {
+                // Sur mobile, centrer le bouton actif
+                const activeButton = document.querySelector('.nav-btn.active');
+                if (activeButton) {
+                    activeButton.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+                }
+            }
+        }
+
+        // Écouter le resize
+        window.addEventListener('resize', handleResponsiveNav);
+
+        // Lazy loading des images (si des images sont ajoutées)
+        if ('IntersectionObserver' in window) {
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src;
+                        img.classList.add('loaded');
+                        observer.unobserve(img);
+                    }
+                });
+            });
+
+            document.querySelectorAll('img[data-src]').forEach(img => {
+                imageObserver.observe(img);
+            });
+        }
+
+        // Analytics tracking (à personnaliser selon vos besoins)
+        function trackEvent(category, action, label) {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', action, {
+                    'event_category': category,
+                    'event_label': label
+                });
+            }
+            console.log(`Event tracked: ${category} - ${action} - ${label}`);
+        }
+
+        // Ajouter les événements de tracking
+        document.querySelectorAll('.cta-button').forEach(button => {
+            button.addEventListener('click', function() {
+                trackEvent('Engagement', 'CTA Click', this.textContent.trim());
+            });
+        });
+
+        document.querySelectorAll('.nav-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                trackEvent('Navigation', 'Section Change', this.textContent.trim());
+            });
+        });
+
+        // Message de bienvenue dans la console
+        console.log('%c🐓 AVI-COSOSO', 'font-size: 24px; font-weight: bold; color: #ea580c;');
+        console.log('%cInitiative Avicole Solidaire du Paysage Ndoubock', 'font-size: 14px; color: #92400e;');
+        console.log('%cPour toute information: contact.cosodo@[domaine].org', 'font-size: 12px; color: #666;');
+
+        // Service Worker pour PWA (optionnel - Progressive Web App)
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                // Décommenter si vous avez un service worker
+                // navigator.serviceWorker.register('/sw.js')
+                //     .then(registration => console.log('SW registered'))
+                //     .catch(err => console.log('SW registration failed'));
+            });
+        }
+
+        // Détection de la langue du navigateur
+        const userLang = navigator.language || navigator.userLanguage;
+        console.log('Langue détectée:', userLang);
+        // Possibilité d'ajouter un système multilingue
+
+        // Export des données en CSV (pour les statistiques)
+        function exportToCSV(data, filename) {
+            const csv = data.map(row => row.join(',')).join('\n');
+            const blob = new Blob([csv], { type: 'text/csv' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.setAttribute('hidden', '');
+            a.setAttribute('href', url);
+            a.setAttribute('download', filename);
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        }
+
+        // Fonction pour afficher un toast (notification)
+        function showToast(message, type = 'info') {
+            const toast = document.createElement('div');
+            toast.className = `toast toast-${type}`;
+            toast.textContent = message;
+            toast.style.cssText = `
+                position: fixed;
+                bottom: 2rem;
+                right: 2rem;
+                background: ${type === 'success' ? 'var(--green-600)' : type === 'error' ? 'var(--red-600)' : 'var(--blue-600)'};
+                color: white;
+                padding: 1rem 1.5rem;
+                border-radius: 0.5rem;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+                z-index: 1000;
+                animation: slideIn 0.3s ease;
+            `;
+           
+            document.body.appendChild(toast);
+           
+            setTimeout(() => {
+                toast.style.animation = 'slideOut 0.3s ease';
+                setTimeout(() => document.body.removeChild(toast), 300);
+            }, 3000);
+        }
+
+        // Ajout des animations CSS pour les toasts
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes slideIn {
+                from {
+                    transform: translateX(400px);
+                    opacity: 0;
+                }
+                to {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+            }
+           
+            @keyframes slideOut {
+                from {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+                to {
+                    transform: translateX(400px);
+                    opacity: 0;
+                }
+            }
+
+            @media (max-width: 768px) {
+                .toast {
+                    right: 1rem !important;
+                    left: 1rem !important;
+                    bottom: 1rem !important;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Gestion du mode hors ligne
+        window.addEventListener('online', () => showToast('Connexion rétablie', 'success'));
+        window.addEventListener('offline', () => showToast('Mode hors ligne', 'error'));
+
+        // Performance monitoring
+        window.addEventListener('load', () => {
+            const perfData = window.performance.timing;
+            const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart;
+            console.log(`Page chargée en ${pageLoadTime}ms`);
+        });
+
+        // Accessibilité : Navigation au clavier
+        document.addEventListener('keydown', (e) => {
+            // ESC pour fermer les modales/FAQ ouverts
+            if (e.key === 'Escape') {
+                document.querySelectorAll('.faq-item.open').forEach((item, i) => {
+                    toggleFaq(i);
+                });
+            }
+        });
+
+        // Focus trap pour l'accessibilité
+        function trapFocus(element) {
+            const focusableElements = element.querySelectorAll(
+                'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+            );
+            const firstFocusable = focusableElements[0];
+            const lastFocusable = focusableElements[focusableElements.length - 1];
+
+            element.addEventListener('keydown', (e) => {
+                if (e.key === 'Tab') {
+                    if (e.shiftKey) {
+                        if (document.activeElement === firstFocusable) {
+                            lastFocusable.focus();
+                            e.preventDefault();
+                        }
+                    } else {
+                        if (document.activeElement === lastFocusable) {
+                            firstFocusable.focus();
+                            e.preventDefault();
+                        }
+                    }
+                }
+            });
+        }
+
+        console.log('✅ Document AVI-COSOSO chargé et prêt !');
+    </script>
+</body>
